@@ -1,0 +1,23 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-09-25T23:14:28.988-06:00  INFO 35236 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.1-SNAPSHOT using Java 21.0.10 with PID 35236 (C:\Users\Diego\Documents\UANL\web\U01\target\backend-academico-0.0.1-SNAPSHOT.jar started by Diego in C:\Users\Diego\Documents\UANL\web\U01)
+2026-09-25T23:14:28.990-06:00  INFO 35236 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-09-25T23:14:29.766-06:00  INFO 35236 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-09-25T23:14:29.772-06:00  INFO 35236 --- [backend-academico] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-25T23:14:29.772-06:00  INFO 35236 --- [backend-academico] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-25T23:14:29.796-06:00  INFO 35236 --- [backend-academico] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 749 ms
+2026-09-25T23:14:30.132-06:00  INFO 35236 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-09-25T23:14:30.143-06:00  INFO 35236 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 1.576 seconds (process running for 1.998)
+2026-09-25T23:14:30.421-06:00  INFO 35236 --- [backend-academico] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-25T23:14:30.421-06:00  INFO 35236 --- [backend-academico] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-25T23:14:30.422-06:00  INFO 35236 --- [backend-academico] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+GET :8081/ -> HTTP 404
+GET :8080/ -> 000 (000 = nadie escucha)

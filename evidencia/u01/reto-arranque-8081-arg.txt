@@ -1,0 +1,18 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-09-25T23:14:41.432-06:00  INFO 38164 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.1-SNAPSHOT using Java 21.0.10 with PID 38164 (C:\Users\Diego\Documents\UANL\web\U01\target\backend-academico-0.0.1-SNAPSHOT.jar started by Diego in C:\Users\Diego\Documents\UANL\web\U01)
+2026-09-25T23:14:41.447-06:00  INFO 38164 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-09-25T23:14:42.230-06:00  INFO 38164 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-09-25T23:14:42.245-06:00  INFO 38164 --- [backend-academico] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-25T23:14:42.245-06:00  INFO 38164 --- [backend-academico] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-25T23:14:42.270-06:00  INFO 38164 --- [backend-academico] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 753 ms
+2026-09-25T23:14:42.566-06:00  INFO 38164 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-09-25T23:14:42.578-06:00  INFO 38164 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 1.596 seconds (process running for 2.028)
