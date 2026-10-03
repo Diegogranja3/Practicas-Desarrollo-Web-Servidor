@@ -1,0 +1,3 @@
+### GET /api/v1/saludo (servidor detenido)
+curl: (7) Failed to connect to localhost port 8080 after 2265 ms: Could not connect to server
+curl exit code: 7

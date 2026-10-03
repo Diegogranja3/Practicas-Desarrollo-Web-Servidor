@@ -1,0 +1,16 @@
+### GET /api/v1/saludo
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 24
+Date: Sat, 03 Oct 2026 03:42:26 GMT
+
+{"mensaje":"Hola Mundo"}
+
+### GET /api/v1/saludo?nombre=Ada
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 22
+Date: Sat, 03 Oct 2026 03:42:26 GMT
+
+{"mensaje":"Hola Ada"}
+
