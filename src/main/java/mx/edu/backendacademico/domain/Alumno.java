@@ -26,4 +26,9 @@ public record Alumno(Long id, String matricula, String nombre, String correo,
         // 3. Se obtiene otro valor; las referencias al valor anterior no cambian.
         return new Alumno(id, matricula, nombre, correo, EstatusAlumno.BAJA);
     }
+
+    public Alumno reactivar() {
+        // Reto U03: transición inversa BAJA -> ACTIVO; también devuelve un valor nuevo.
+        return new Alumno(id, matricula, nombre, correo, EstatusAlumno.ACTIVO);
+    }
 }

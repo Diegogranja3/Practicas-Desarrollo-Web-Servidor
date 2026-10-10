@@ -1,0 +1,7 @@
+### GET /api/v1/saludo
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 26
+Date: Sat, 10 Oct 2026 02:05:56 GMT
+
+{"mensaje":"Hola backend"}

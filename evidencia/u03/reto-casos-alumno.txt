@@ -1,0 +1,5 @@
+testcase name="bajaConservaIdentidadSinModificarElOriginal"
+testcase name="rechazaMatriculaVacia"
+testcase name="reactivarConservaIdentidadSinModificarElOriginal"
+testcase name="mismoIdConDistintoCorreoNoSonIgualesComoValor"
+testcase name="materiaRechazaCreditosNoPositivos"
