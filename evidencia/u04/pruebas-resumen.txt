@@ -1,0 +1,5 @@
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.315 s -- in mx.edu.backendacademico.BackendAcademicoApplicationTests
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in mx.edu.backendacademico.domain.AlumnoTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Building jar: C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.4-SNAPSHOT.jar
+[INFO] BUILD SUCCESS

@@ -1,0 +1,29 @@
+PS> java -jar target/backend-academico-0.0.4-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-10-12T11:42:52.154-06:00  INFO 27944 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.4-SNAPSHOT using Java 21.0.10 with PID 27944 (C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.4-SNAPSHOT.jar started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-10-12T11:42:52.160-06:00  INFO 27944 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-12T11:42:52.943-06:00  INFO 27944 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-12T11:42:52.962-06:00  INFO 27944 --- [backend-academico] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-12T11:42:52.962-06:00  INFO 27944 --- [backend-academico] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-10-12T11:42:52.990-06:00  INFO 27944 --- [backend-academico] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 764 ms
+2026-10-12T11:42:53.051-06:00  INFO 27944 --- [backend-academico] [           main] m.e.backendacademico.config.CicloDeVida  : Bean inicializado en 2026-10-12T17:42:53.051262900Z
+2026-10-12T11:42:53.326-06:00  INFO 27944 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-12T11:42:53.343-06:00  INFO 27944 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 1.614 seconds (process running for 2.041)
+2026-10-12T11:42:54.387-06:00  INFO 27944 --- [backend-academico] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-12T11:42:54.387-06:00  INFO 27944 --- [backend-academico] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-12T11:42:54.387-06:00  INFO 27944 --- [backend-academico] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-12T11:42:54.940-06:00  INFO 27944 --- [backend-academico] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-12T11:42:54.946-06:00  INFO 27944 --- [backend-academico] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-12T11:42:54.946-06:00  INFO 27944 --- [backend-academico] [ionShutdownHook] m.e.backendacademico.config.CicloDeVida  : Cierre del bean de demostración
+
+PS> curl.exe http://localhost:8080/api/v1/saludo  -> 200
+PS> (Ctrl+C)
