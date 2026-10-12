@@ -1,0 +1,11 @@
+# Experimento de control: se quitó temporalmente 'synchronized' de AlumnoRepositoryEnMemoria
+# (el archivo se restauró después; no forma parte del commit)
+
+     32 org.opentest4j.AssertionFailedError: Exactamente un registro ==> expected: <1> but was: <2>
+     32 [ERROR]   AlumnoRepositoryConcurrenciaTest.mismaMatriculaEnParaleloDejaUnRegistroYUnConflicto:49 Exactamente un registro ==> expected: <1> but was: <2>
+      1 [ERROR] Tests run: 50, Failures: 32, Errors: 0, Skipped: 0, Time elapsed: 0.257 s <<< FAILURE! -- in mx.edu.backendacademico.repository.AlumnoRepositoryConcurrenciaTest
+      1 [ERROR] Tests run: 50, Failures: 32, Errors: 0, Skipped: 0
+      1 [ERROR] mx.edu.backendacademico.repository.AlumnoRepositoryConcurrenciaTest.mismaMatriculaEnParaleloDejaUnRegistroYUnConflicto()[9] -- Time elapsed: 0.003 s <<< FAILURE!
+      1 [ERROR] mx.edu.backendacademico.repository.AlumnoRepositoryConcurrenciaTest.mismaMatriculaEnParaleloDejaUnRegistroYUnConflicto()[50] -- Time elapsed: 0 s <<< FAILURE!
+      1 [ERROR] mx.edu.backendacademico.repository.AlumnoRepositoryConcurrenciaTest.mismaMatriculaEnParaleloDejaUnRegistroYUnConflicto()[48] -- Time elapsed: 0.002 s <<< FAILURE!
+      1 [ERROR] mx.edu.backendacademico.repository.AlumnoRepositoryConcurrenciaTest.mismaMatriculaEnParaleloDejaUnRegistroYUnConflicto()[47] -- Time elapsed: 0 s <<< FAILURE!
