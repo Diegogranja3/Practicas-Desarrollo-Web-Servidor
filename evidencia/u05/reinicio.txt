@@ -1,0 +1,26 @@
+# Antes de reiniciar
+### POST /api/v1/alumnos  {"matricula":"B002","nombre":"Emmy Noether","correo":"emmy@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"B002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
+
+
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 103
+
+[{"id":1,"matricula":"B002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}]
+
+
+# Proceso detenido e iniciado de nuevo
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 2
+
+[]
+
+

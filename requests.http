@@ -1,6 +1,22 @@
-### Saludo correcto
-GET http://localhost:8080/api/v1/saludo
-Accept: application/json
+@baseUrl = http://localhost:8080/api/v1
 
-### Ruta inexistente: debe responder 404
-GET http://localhost:8080/api/v1/no-existe
+### Crear alumno: 201 y Location
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+
+### Listar alumnos
+GET {{baseUrl}}/alumnos
+
+### Consultar alumno
+GET {{baseUrl}}/alumnos/1
+
+### Actualizar alumno
+PUT {{baseUrl}}/alumnos/1
+Content-Type: application/json
+
+{"nombre":"Ada Byron","correo":"ada.byron@universidad.mx"}
+
+### Eliminar alumno: 204
+DELETE {{baseUrl}}/alumnos/1

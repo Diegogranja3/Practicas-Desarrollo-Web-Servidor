@@ -1,0 +1,53 @@
+### POST /api/v1/alumnos  {"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 102
+
+[{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}]
+
+
+### GET /api/v1/alumnos/1
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 100
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+### PUT /api/v1/alumnos/1  {"nombre":"Ada Byron","correo":"ada.byron@universidad.mx"}
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 103
+
+{"id":1,"matricula":"A001","nombre":"Ada Byron","correo":"ada.byron@universidad.mx","estatus":"ACTIVO"}
+
+
+### GET /api/v1/alumnos/1
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 103
+
+{"id":1,"matricula":"A001","nombre":"Ada Byron","correo":"ada.byron@universidad.mx","estatus":"ACTIVO"}
+
+
+### DELETE /api/v1/alumnos/1
+HTTP/1.1 204 
+
+
+
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 2
+
+[]
+
+
