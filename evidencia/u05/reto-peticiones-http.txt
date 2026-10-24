@@ -1,0 +1,61 @@
+# Preparación: dos alumnos creados por la API (ambos inician en ACTIVO)
+### POST /api/v1/alumnos  {"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+### POST /api/v1/alumnos  {"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/2
+Content-Type: application/json
+
+{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
+
+
+# 1) Sin filtro
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 204
+
+[{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"},{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}]
+
+
+# 2) ACTIVO
+### GET /api/v1/alumnos?estatus=ACTIVO
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 204
+
+[{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"},{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}]
+
+
+# 3) BAJA
+### GET /api/v1/alumnos?estatus=BAJA
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 2
+
+[]
+
+
+# Extra: valor fuera del enum
+### GET /api/v1/alumnos?estatus=PAUSA
+HTTP/1.1 400 
+Content-Type: application/json
+
+{"timestamp":"2026-10-24T18:31:08.899Z","status":400,"error":"Bad Request","path":"/api/v1/alumnos"}
+
+
+# La consulta no modificó el repositorio
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 204
+
+[{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"},{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}]
+
+

@@ -23,6 +23,15 @@ public class AlumnoService {
         return repository.buscarTodos();
     }
 
+    public List<Alumno> listar(EstatusAlumno estatus) {
+        // Reto U05: sin filtro se conserva el contrato original.
+        if (estatus == null) return listar();
+        // filter sólo lee la copia que entrega el repositorio; toList produce otra lista.
+        return repository.buscarTodos().stream()
+            .filter(alumno -> alumno.estatus() == estatus)
+            .toList();
+    }
+
     public Alumno buscar(Long id) {
         // La ausencia se interpreta como un error de aplicación explícito.
         return repository.buscarPorId(id).orElseThrow(() -> new AlumnoNoEncontradoException(id));

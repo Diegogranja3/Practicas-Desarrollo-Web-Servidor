@@ -4,6 +4,7 @@ package mx.edu.backendacademico.controller;
 
 import java.net.URI;
 import java.util.List;
+import mx.edu.backendacademico.domain.EstatusAlumno;
 import mx.edu.backendacademico.dto.ActualizarAlumnoRequest;
 import mx.edu.backendacademico.dto.AlumnoMapper;
 import mx.edu.backendacademico.dto.AlumnoResponse;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -26,8 +28,11 @@ public class AlumnoController {
     public AlumnoController(AlumnoService service) { this.service = service; }
 
     // GET consulta sin solicitar cambios de estado de negocio.
+    // Reto U05: ?estatus=ACTIVO|BAJA es opcional; MVC convierte el texto al enum antes de invocar.
     @GetMapping
-    public List<AlumnoResponse> listar() { return service.listar().stream().map(AlumnoMapper::toResponse).toList(); }
+    public List<AlumnoResponse> listar(@RequestParam(required = false) EstatusAlumno estatus) {
+        return service.listar(estatus).stream().map(AlumnoMapper::toResponse).toList();
+    }
 
     // GET consulta sin solicitar cambios de estado de negocio.
     @GetMapping("/{id}")

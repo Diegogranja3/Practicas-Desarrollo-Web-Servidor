@@ -20,3 +20,12 @@ Content-Type: application/json
 
 ### Eliminar alumno: 204
 DELETE {{baseUrl}}/alumnos/1
+
+### Reto U05: sin filtro (mismo contrato que antes: todos los alumnos)
+GET {{baseUrl}}/alumnos
+
+### Reto U05: sólo ACTIVO (todo alumno creado por POST inicia en ACTIVO)
+GET {{baseUrl}}/alumnos?estatus=ACTIVO
+
+### Reto U05: sólo BAJA (lista vacía: la API todavía no ofrece una operación de baja)
+GET {{baseUrl}}/alumnos?estatus=BAJA
