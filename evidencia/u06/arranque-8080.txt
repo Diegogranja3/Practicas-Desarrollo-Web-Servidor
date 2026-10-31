@@ -1,0 +1,23 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-10-30T21:08:35.624-06:00  INFO 50088 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.6-SNAPSHOT using Java 21.0.10 with PID 50088 (C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.6-SNAPSHOT.jar started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-10-30T21:08:35.631-06:00  INFO 50088 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-30T21:08:36.622-06:00  INFO 50088 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-30T21:08:36.646-06:00  INFO 50088 --- [backend-academico] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-30T21:08:36.646-06:00  INFO 50088 --- [backend-academico] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-10-30T21:08:36.677-06:00  INFO 50088 --- [backend-academico] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 984 ms
+2026-10-30T21:08:36.737-06:00  INFO 50088 --- [backend-academico] [           main] m.e.backendacademico.config.CicloDeVida  : Bean inicializado en 2026-10-31T03:08:36.737717400Z
+2026-10-30T21:08:37.127-06:00  INFO 50088 --- [backend-academico] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-30T21:08:37.143-06:00  INFO 50088 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 1.957 seconds (process running for 2.505)
+2026-10-30T21:08:38.057-06:00  INFO 50088 --- [backend-academico] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-30T21:08:38.057-06:00  INFO 50088 --- [backend-academico] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-30T21:08:38.057-06:00  INFO 50088 --- [backend-academico] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-30T21:08:38.839-06:00  WARN 50088 --- [backend-academico] [nio-8080-exec-8] o.s.web.servlet.PageNotFound             : Request method 'DELETE' is not supported

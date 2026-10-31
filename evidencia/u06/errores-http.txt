@@ -1,0 +1,65 @@
+# 1) El caso exitoso no cambia
+### POST /api/v1/alumnos  {"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+# 2) Body inválido: varios campos
+### POST /api/v1/alumnos  {"matricula":"","nombre":"A","correo":"no-es-correo"}
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"correo","mensaje":"debe ser una dirección de correo electrónico con formato correcto"},{"campo":"nombre","mensaje":"el tamaño debe estar entre 3 y 120"},{"campo":"matricula","mensaje":"no debe estar vacío"}]}
+
+
+# 3) JSON incompleto: no se puede leer el mensaje
+### POST /api/v1/alumnos  {"matricula":"A002","nombre":
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Failed to read request","instance":"/api/v1/alumnos","status":400,"title":"Bad Request"}
+
+
+# 4) Id inexistente
+### GET /api/v1/alumnos/999
+HTTP/1.1 404 
+Content-Type: application/problem+json
+
+{"detail":"No existe el alumno con id 999","instance":"/api/v1/alumnos/999","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+
+# 5) Matrícula duplicada (segunda vez)
+### POST /api/v1/alumnos  {"matricula":"A001","nombre":"Otra persona","correo":"otra@universidad.mx"}
+HTTP/1.1 409 
+Content-Type: application/problem+json
+
+{"detail":"Ya existe la matrícula A001","instance":"/api/v1/alumnos","status":409,"title":"Conflict","type":"urn:backend-academico:problema:MATRICULA_DUPLICADA","codigo":"MATRICULA_DUPLICADA"}
+
+
+# 6) PUT también valida
+### PUT /api/v1/alumnos/1  {"nombre":"","correo":"ada"}
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos/1","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"correo","mensaje":"debe ser una dirección de correo electrónico con formato correcto"},{"campo":"nombre","mensaje":"el tamaño debe estar entre 3 y 120"},{"campo":"nombre","mensaje":"no debe estar vacío"}]}
+
+
+# 7) Errores estándar de MVC conservan su status
+### DELETE /api/v1/alumnos
+HTTP/1.1 405 
+Allow: POST, GET
+Content-Type: application/problem+json
+
+{"detail":"Method 'DELETE' is not supported.","instance":"/api/v1/alumnos","status":405,"title":"Method Not Allowed"}
+
+
+### GET /api/v1/alumnos/abc
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Failed to convert 'id' with value: 'abc'","instance":"/api/v1/alumnos/abc","status":400,"title":"Bad Request"}
+
+

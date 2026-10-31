@@ -20,3 +20,14 @@ Content-Type: application/json
 
 ### Eliminar alumno: 204
 DELETE {{baseUrl}}/alumnos/1
+### Body inválido: 400 con campos
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"","nombre":"A","correo":"no-es-correo"}
+
+### Matrícula duplicada: ejecutar dos veces para obtener 409
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"A001","nombre":"Otra persona","correo":"otra@universidad.mx"}
