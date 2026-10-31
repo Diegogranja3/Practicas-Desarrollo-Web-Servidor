@@ -1,0 +1,7 @@
+# Experimento de control: se quitó temporalmente @Pattern de CrearAlumnoRequest (restaurado después)
+
+[ERROR] Tests run: 4, Failures: 2, Errors: 0, Skipped: 0
+MatriculaSinEspaciosHttpTest.rechazaEspacioInterno:25 expected: <400> but was: <201>
+MatriculaSinEspaciosHttpTest.rechazaTabuladorInterno:32 expected: <400> but was: <201>
+
+# Sin la regla, "A 001" y "A<TAB>002" se crean con 201: el dominio sí admite espacios internos.

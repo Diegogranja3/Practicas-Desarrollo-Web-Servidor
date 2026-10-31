@@ -1,0 +1,32 @@
+# 1) Espacio interno: rechazado en la frontera
+### POST /api/v1/alumnos  {"matricula":"A 002","nombre":"Grace Hopper","correo":"grace@universidad.mx"}
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"matricula","mensaje":"no debe contener espacios internos"}]}
+
+
+# 2) Espacios externos y minúsculas: aceptados, el dominio guarda la forma canónica
+### POST /api/v1/alumnos  {"matricula":"  a003  ","nombre":"Emmy Noether","correo":"emmy@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"A003","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
+
+
+# 3) Los demás códigos publicados no cambian
+### POST /api/v1/alumnos  {"matricula":"A003","nombre":"Otra persona","correo":"otra@universidad.mx"}
+HTTP/1.1 409 
+Content-Type: application/problem+json
+
+{"detail":"Ya existe la matrícula A003","instance":"/api/v1/alumnos","status":409,"title":"Conflict","type":"urn:backend-academico:problema:MATRICULA_DUPLICADA","codigo":"MATRICULA_DUPLICADA"}
+
+
+### POST /api/v1/alumnos  {"matricula":"","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"matricula","mensaje":"no debe estar vacío"}]}
+
+

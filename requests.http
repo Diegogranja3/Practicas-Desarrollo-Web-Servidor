@@ -31,3 +31,15 @@ POST {{baseUrl}}/alumnos
 Content-Type: application/json
 
 {"matricula":"A001","nombre":"Otra persona","correo":"otra@universidad.mx"}
+
+### Reto U06: espacio interno en la matrícula -> 400 DATOS_INVALIDOS
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"A 002","nombre":"Grace Hopper","correo":"grace@universidad.mx"}
+
+### Reto U06: espacios externos y minúsculas se aceptan -> 201 con matricula "A003"
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"  a003  ","nombre":"Emmy Noether","correo":"emmy@universidad.mx"}
