@@ -1,0 +1,13 @@
+# Copias de laboratorio de la base 'academico' (la original no se modifica)
+academico=# CREATE DATABASE academico_reto TEMPLATE academico;
+CREATE DATABASE
+academico=# CREATE DATABASE academico_incompatible TEMPLATE academico;
+CREATE DATABASE
+
+# Estado de academico_reto ANTES de V2
+academico_reto=# SELECT c.oid AS oid_tabla, (SELECT count(*) FROM alumnos) AS filas, (SELECT max(version) FROM flyway_schema_history) AS version FROM pg_class c WHERE c.relname = 'alumnos';
+ oid_tabla | filas | version 
+-----------+-------+---------
+     16395 |     1 | 1
+(1 row)
+

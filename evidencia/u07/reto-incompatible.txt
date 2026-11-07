@@ -1,0 +1,34 @@
+# Con V1, un nombre en blanco es válido para la base
+academico_incompatible=# INSERT INTO alumnos (matricula, nombre, correo, estatus) VALUES ('B001', '   ', 'b1@u.mx', 'ACTIVO');
+INSERT 0 1
+
+PS> $env:DB_URL = 'jdbc:postgresql://localhost:5432/academico_incompatible'; java -jar target\backend-academico-0.0.7-SNAPSHOT.jar
+o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - nombre no vacio"
+Migration V2__nombre_no_vacio.sql failed
+SQL State  : 23514
+Error Code : 0
+Message    : ERROR: check constraint "ck_nombre_no_vacio" of relation "alumnos" is violated by some row
+Location   : db/migration/V2__nombre_no_vacio.sql
+Line       : 5
+APPLICATION FAILED TO START (Flyway detiene el arranque)
+(el proceso terminó con código 1)
+
+# Después del fallo: la tabla, los datos y el historial siguen como estaban (DDL transaccional en PostgreSQL)
+academico_incompatible=# SELECT installed_rank, version, script, success FROM flyway_schema_history ORDER BY installed_rank;
+ installed_rank | version |        script         | success 
+----------------+---------+-----------------------+---------
+              1 | 1       | V1__crear_alumnos.sql | t
+(1 row)
+
+academico_incompatible=# SELECT id, matricula, '[' || nombre || ']' AS nombre FROM alumnos ORDER BY id;
+ id | matricula |     nombre     
+----+-----------+----------------
+  1 | A001      | [Ada Lovelace]
+  4 | B001      | [   ]
+(2 rows)
+
+academico_incompatible=# SELECT conname FROM pg_constraint WHERE conname = 'ck_nombre_no_vacio';
+ conname 
+---------
+(0 rows)
+
