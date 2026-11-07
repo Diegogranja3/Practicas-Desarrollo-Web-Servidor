@@ -1,0 +1,10 @@
+PS> docker compose up -d
+ Image postgres:17-alpine Pulled 
+ Network practicas-desarrollo-web-servidor_default Creating 
+ Network practicas-desarrollo-web-servidor_default Created 
+ Volume practicas-desarrollo-web-servidor_datos_academicos Creating 
+ Volume practicas-desarrollo-web-servidor_datos_academicos Created 
+ Container practicas-desarrollo-web-servidor-postgres-1 Creating 
+ Container practicas-desarrollo-web-servidor-postgres-1 Created 
+ Container practicas-desarrollo-web-servidor-postgres-1 Starting 
+ Container practicas-desarrollo-web-servidor-postgres-1 Started 

@@ -9,8 +9,10 @@ import mx.edu.backendacademico.exception.AlumnoNoEncontradoException;
 import mx.edu.backendacademico.exception.MatriculaDuplicadaException;
 import mx.edu.backendacademico.repository.AlumnoRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly = true)
 public class AlumnoService {
     private final AlumnoRepository repository;
 
@@ -28,6 +30,7 @@ public class AlumnoService {
         return repository.buscarPorId(id).orElseThrow(() -> new AlumnoNoEncontradoException(id));
     }
 
+    @Transactional
     public Alumno crear(String matricula, String nombre, String correo) {
         // Esta comprobación mejora el mensaje; el almacén vuelve a proteger unicidad.
         if (repository.existePorMatricula(matricula)) {
@@ -36,12 +39,14 @@ public class AlumnoService {
         return repository.guardar(new Alumno(null, matricula, nombre, correo, EstatusAlumno.ACTIVO));
     }
 
+    @Transactional
     public Alumno actualizar(Long id, String nombre, String correo) {
         // Recupera el estado actual y conserva identidad, matrícula y estatus.
         var actual = buscar(id);
         return repository.guardar(new Alumno(id, actual.matricula(), nombre, correo, actual.estatus()));
     }
 
+    @Transactional
     public void eliminar(Long id) {
         // Si no existe, comunica ausencia antes de solicitar la eliminación.
         buscar(id);

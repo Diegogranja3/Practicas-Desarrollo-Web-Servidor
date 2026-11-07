@@ -1,0 +1,33 @@
+# Primera ejecución de la aplicación
+### POST /api/v1/alumnos  {"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+Content-Type: application/json
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+### GET /api/v1/alumnos
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 102
+
+[{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}]
+
+
+# Se detuvo y se volvió a iniciar SOLO la aplicación (PostgreSQL siguió corriendo)
+### GET /api/v1/alumnos/1
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 100
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+### POST /api/v1/alumnos  {"matricula":"a001","nombre":"Otra persona","correo":"otra@universidad.mx"}
+HTTP/1.1 409 
+Content-Type: application/problem+json
+
+{"detail":"Ya existe la matrícula a001","instance":"/api/v1/alumnos","status":409,"title":"Conflict","type":"urn:backend-academico:problema:MATRICULA_DUPLICADA","codigo":"MATRICULA_DUPLICADA"}
+
+

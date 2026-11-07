@@ -7,8 +7,10 @@ import java.util.Optional;
 import mx.edu.backendacademico.domain.Alumno;
 import mx.edu.backendacademico.exception.MatriculaDuplicadaException;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
 @Repository
+@Profile("!jpa")
 public class AlumnoRepositoryEnMemoria implements AlumnoRepository {
     private final Map<Long, Alumno> datos = new LinkedHashMap<>();
     private long secuencia;

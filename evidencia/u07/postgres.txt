@@ -1,0 +1,31 @@
+PS> docker compose exec postgres psql -U academico -d academico
+
+academico=# SELECT installed_rank, version, description, script, success FROM flyway_schema_history;
+ installed_rank | version |  description  |        script         | success 
+----------------+---------+---------------+-----------------------+---------
+              1 | 1       | crear alumnos | V1__crear_alumnos.sql | t
+(1 row)
+
+academico=# SELECT * FROM alumnos;
+ id | matricula |    nombre    |       correo       | estatus 
+----+-----------+--------------+--------------------+---------
+  1 | A001      | Ada Lovelace | ada@universidad.mx | ACTIVO
+(1 row)
+
+academico=# SELECT conname, pg_get_constraintdef(oid) FROM pg_constraint WHERE conrelid = 'alumnos'::regclass;
+        conname        |                                           pg_get_constraintdef                                            
+-----------------------+-----------------------------------------------------------------------------------------------------------
+ alumnos_estatus_check | CHECK (((estatus)::text = ANY ((ARRAY['ACTIVO'::character varying, 'BAJA'::character varying])::text[])))
+ alumnos_pkey          | PRIMARY KEY (id)
+ ck_matricula_canonica | CHECK (((matricula)::text = upper(TRIM(BOTH FROM matricula))))
+ ck_matricula_no_vacia | CHECK ((length(TRIM(BOTH FROM matricula)) > 0))
+ uk_alumnos_matricula  | UNIQUE (matricula)
+(5 rows)
+
+# La base protege la forma canónica aunque se salte Java:
+academico=# INSERT INTO alumnos (matricula, nombre, correo, estatus) VALUES ('a002', 'X', 'x@u.mx', 'ACTIVO');
+ERROR:  new row for relation "alumnos" violates check constraint "ck_matricula_canonica"
+DETAIL:  Failing row contains (2, a002, X, x@u.mx, ACTIVO).
+academico=# INSERT INTO alumnos (matricula, nombre, correo, estatus) VALUES ('A001', 'X', 'x@u.mx', 'ACTIVO');
+ERROR:  duplicate key value violates unique constraint "uk_alumnos_matricula"
+DETAIL:  Key (matricula)=(A001) already exists.
