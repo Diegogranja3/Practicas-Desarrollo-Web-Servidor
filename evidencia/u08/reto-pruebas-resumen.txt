@@ -1,0 +1,9 @@
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.468 s -- in mx.edu.backendacademico.BackendAcademicoApplicationTests
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in mx.edu.backendacademico.domain.AlumnoTest
+tc.postgres:17-alpine                    : Creating container for image: postgres:17-alpine
+tc.postgres:17-alpine                    : Container postgres:17-alpine started in PT2.9653023S
+[RETO-U08] pg_stat_activity de la admisión en espera: {pid=62, wait_event_type=Lock, wait_event=transactionid, state=active, query=select me1_0.id,me1_0.clave,me1_0.creditos,me1_0.cupo,me1_0.nombre fro}
+[RETO-U08] Estado del hilo de la admisión: RUNNABLE | en el driver org.postgresql: true | marco superior: java.base/sun.nio.ch.Net.poll(Native Method)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.887 s -- in mx.edu.backendacademico.service.InscripcionConcurrenteTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS

@@ -1,0 +1,8 @@
+# Experimento de control: se quitó temporalmente @Lock(PESSIMISTIC_WRITE) de MateriaRepository (restaurado después)
+
+[ERROR] Tests run: 11, Failures: 11, Errors: 0, Skipped: 0
+10 x InscripcionConcurrenteTest.dosAdmisionesSimultaneasDejanUnaInscripcionYUnRechazoPorCupo:66 Una admisión persiste: [INSCRITO, INSCRITO] ==> expected: <1> but was: <2>
+1 x InscripcionConcurrenteTest.laSegundaAdmisionEsperaElBloqueoDentroDePostgreSQL:98->esperarSesionBloqueada:147 Ninguna sesión de PostgreSQL quedó esperando el bloqueo de la materia
+
+# Sin el bloqueo, ambas transacciones cuentan 0 inscripciones, ven cupo libre e insertan: 2 filas con cupo 1.
+# Y ninguna sesión espera en PostgreSQL, porque nada serializa el acceso a la fila de la materia.
