@@ -37,6 +37,30 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, detalle, headers, status, request);
     }
 
+    @ExceptionHandler(org.springframework.dao.DataIntegrityViolationException.class)
+    ProblemDetail integridad(org.springframework.dao.DataIntegrityViolationException ex) {
+        Throwable causa = ex;
+        while (causa != null) {
+            if (causa instanceof org.hibernate.exception.ConstraintViolationException restriccion) {
+                String nombre = restriccion.getConstraintName();
+                if ("fk_inscripcion_alumno".equalsIgnoreCase(nombre) ||
+                    "fk_inscripcion_materia".equalsIgnoreCase(nombre)) {
+                    return problema(HttpStatus.CONFLICT, "RECURSO_REFERENCIADO",
+                        "El recurso participa en una inscripción y no puede eliminarse");
+                }
+            }
+            causa = causa.getCause();
+        }
+        return inesperado(ex);
+    }
+
+    @ExceptionHandler(OperacionAcademicaException.class)
+    ProblemDetail academica(OperacionAcademicaException ex) {
+        var status = ex.getCodigo().equals("MATERIA_NO_ENCONTRADA")
+            ? HttpStatus.NOT_FOUND : HttpStatus.CONFLICT;
+        return problema(status, ex.getCodigo(), ex.getMessage());
+    }
+
     @ExceptionHandler(Exception.class)
     ProblemDetail inesperado(Exception ex) {
         String referencia = UUID.randomUUID().toString();

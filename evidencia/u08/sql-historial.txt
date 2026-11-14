@@ -1,0 +1,5 @@
+# SQL emitido por UNA consulta de historial (logging.level.org.hibernate.SQL=DEBUG, solo para esta corrida)
+select count(*) from alumnos ae1_0 where ae1_0.id=?
+select ie1_0.id,ie1_0.alumno_id,ie1_0.fecha,ie1_0.materia_id,m1_0.id,m1_0.clave,m1_0.creditos,m1_0.cupo,m1_0.nombre from inscripciones ie1_0 join materias m1_0 on m1_0.id=ie1_0.materia_id where ie1_0.alumno_id=? order by ie1_0.fecha,ie1_0.id fetch first ? rows only
+
+# Sentencias: 2

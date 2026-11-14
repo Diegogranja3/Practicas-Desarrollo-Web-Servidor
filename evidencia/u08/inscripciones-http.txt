@@ -1,0 +1,74 @@
+# Alumno existente de U07 (id 1)
+### GET /api/v1/alumnos/1
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 100
+
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+
+# 1) Inscribir: 201
+### POST /api/v1/inscripciones?alumnoId=1&materiaId=1
+HTTP/1.1 201 
+Content-Type: application/json
+
+{"id":1}
+
+
+# 2) Repetir: 409 INSCRIPCION_DUPLICADA
+### POST /api/v1/inscripciones?alumnoId=1&materiaId=1
+HTTP/1.1 409 
+Content-Type: application/problem+json
+
+{"detail":"La inscripción ya existe","instance":"/api/v1/inscripciones","status":409,"title":"Conflict","type":"urn:backend-academico:problema:INSCRIPCION_DUPLICADA","codigo":"INSCRIPCION_DUPLICADA"}
+
+
+# 3) Historial con tamaño 5
+### GET /api/v1/inscripciones/alumno/1?page=0&size=5&sort=fecha
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 167
+
+{"contenido":[{"id":1,"materiaId":1,"materia":"Análisis matemático","fecha":"2026-11-14T00:41:26.698239"}],"pagina":0,"tamano":5,"totalElementos":1,"totalPaginas":1}
+
+
+# 4) Tamaño 51: 400
+### GET /api/v1/inscripciones/alumno/1?page=0&size=51
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Paginación o identificador inválido","instance":"/api/v1/inscripciones/alumno/1","status":400,"title":"Bad Request"}
+
+
+# 5) Campo de orden fuera de la lista blanca: 400
+### GET /api/v1/inscripciones/alumno/1?sort=alumno
+HTTP/1.1 400 
+Content-Type: application/problem+json
+
+{"detail":"Paginación o identificador inválido","instance":"/api/v1/inscripciones/alumno/1","status":400,"title":"Bad Request"}
+
+
+# 6) Materia inexistente: 404 MATERIA_NO_ENCONTRADA
+### POST /api/v1/inscripciones?alumnoId=1&materiaId=999
+HTTP/1.1 404 
+Content-Type: application/problem+json
+
+{"detail":"No existe la materia","instance":"/api/v1/inscripciones","status":404,"title":"Not Found","type":"urn:backend-academico:problema:MATERIA_NO_ENCONTRADA","codigo":"MATERIA_NO_ENCONTRADA"}
+
+
+# 7) Alumno inexistente: 404 ALUMNO_NO_ENCONTRADO
+### POST /api/v1/inscripciones?alumnoId=999&materiaId=1
+HTTP/1.1 404 
+Content-Type: application/problem+json
+
+{"detail":"No existe el alumno con id 999","instance":"/api/v1/inscripciones","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+
+# 8) Eliminar un alumno con inscripción: 409 RECURSO_REFERENCIADO (clave foránea)
+### DELETE /api/v1/alumnos/1
+HTTP/1.1 409 
+Content-Type: application/problem+json
+
+{"detail":"El recurso participa en una inscripción y no puede eliminarse","instance":"/api/v1/alumnos/1","status":409,"title":"Conflict","type":"urn:backend-academico:problema:RECURSO_REFERENCIADO","codigo":"RECURSO_REFERENCIADO"}
+
+
