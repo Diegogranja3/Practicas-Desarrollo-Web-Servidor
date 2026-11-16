@@ -77,8 +77,8 @@ powershell -ExecutionPolicy Bypass -File .\demo.ps1
 | 7 | Seguridad (CSRF): docente válido sin token | **403** |
 | 8 | Seguridad (rol): ALUMNO con token válido intenta crear | **403** |
 | 9 | Propietario: `a001` ve su ficha / una ajena / la lista | 200 / **404** / **403** |
-| 10 | Falla de PostgreSQL: liveness / readiness / consulta | 200 / **503** / **500** con `referencia` |
-| 11 | Recuperación de PostgreSQL | readiness 200, consulta 200 |
+| 10 | Falla de PostgreSQL: liveness / readiness / lectura en caché / creación | 200 / **503** / 200 (desde la caché) / **500** con `referencia` |
+| 11 | Recuperación de PostgreSQL | readiness 200, la creación responde 201 |
 
 Las peticiones individuales también están en `requests.http` para el HTTP Client del IDE, pero no son necesarias.
 

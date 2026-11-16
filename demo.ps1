@@ -1,4 +1,4 @@
-<#
+﻿<#
   Reto U12: reproduce todas las observaciones de la entrega sin depender del IDE.
   Requisitos: la aplicación levantada con "docker compose up -d" (ver ENTREGA.md) y una base NUEVA,
   porque el script crea los alumnos A001 y A002.
@@ -73,7 +73,8 @@ Write-Output 'PS> docker compose stop postgres'
 docker compose stop postgres 2>&1 | ForEach-Object { "$_" }
 Pedir 'Liveness con PostgreSQL detenido -> 200 UP (el proceso vive)' @("$U/actuator/health/liveness")
 Pedir 'Readiness con PostgreSQL detenido -> 503 DOWN (no debe recibir tráfico)' @("$U/actuator/health/readiness")
-Pedir 'Una consulta que necesita la base -> 500 ERROR_INTERNO con referencia' @('-u','docente:docente123',"$U/api/v1/alumnos/$idA001")
+Pedir "Lectura de A001, que ya está en la caché local -> 200 (la caché responde sin consultar la base)" @('-u','docente:docente123',"$U/api/v1/alumnos/$idA001")
+Pedir 'Operación que sí necesita la base (crear A003) -> 500 ERROR_INTERNO con referencia' @('-X','POST','-u','docente:docente123','-b',$cookiesDocente,'-H',"X-CSRF-TOKEN: $td",'-H','Content-Type: application/json','--data-binary',(Json '{"matricula":"A003","nombre":"Grace Hopper","correo":"grace@universidad.mx"}'),"$U/api/v1/alumnos")
 Write-Output ''
 Write-Output 'PS> docker compose start postgres'
 docker compose start postgres 2>&1 | ForEach-Object { "$_" }
@@ -84,6 +85,6 @@ for ($i = 0; $i -lt 30 -and -not $listo; $i++) {
     $listo = ($estado -eq '200')
 }
 Pedir 'Readiness tras recuperar PostgreSQL -> 200 UP' @("$U/actuator/health/readiness")
-Pedir "La consulta vuelve a funcionar -> 200" @('-u','docente:docente123',"$U/api/v1/alumnos/$idA001")
+Pedir 'La creación vuelve a funcionar -> 201' @('-X','POST','-u','docente:docente123','-b',$cookiesDocente,'-H',"X-CSRF-TOKEN: $td",'-H','Content-Type: application/json','--data-binary',(Json '{"matricula":"A003","nombre":"Grace Hopper","correo":"grace@universidad.mx"}'),"$U/api/v1/alumnos")
 
 Remove-Item -Recurse -Force $tmp

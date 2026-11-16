@@ -1,0 +1,96 @@
+﻿PS> powershell -ExecutionPolicy Bypass -File .\demo.ps1
+=================== 1. Salud ===================
+
+### GET /actuator/health/liveness
+HTTP/1.1 200 
+{"status":"UP"}
+
+### GET /actuator/health/readiness
+HTTP/1.1 200 
+{"status":"UP"}
+
+=================== 2. Ã‰xito, validaciÃ³n, ausencia y conflicto ===================
+
+### Ã‰xito: POST /api/v1/alumnos A001 (docente + CSRF) -> 201
+HTTP/1.1 201 
+Location: /api/v1/alumnos/1
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+### ValidaciÃ³n: cuerpo invÃ¡lido -> 400 DATOS_INVALIDOS
+HTTP/1.1 400 
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"nombre","mensaje":"size must be between 3 and 120"},{"campo":"matricula","mensaje":"must not be blank"},{"campo":"correo","mensaje":"must be a well-formed email address"}]}
+
+### Ausencia: GET /api/v1/alumnos/999 -> 404 ALUMNO_NO_ENCONTRADO
+HTTP/1.1 404 
+{"detail":"No existe el alumno con id 999","instance":"/api/v1/alumnos/999","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+### Conflicto: POST A001 otra vez -> 409 MATRICULA_DUPLICADA
+HTTP/1.1 409 
+{"detail":"Ya existe la matrícula A001","instance":"/api/v1/alumnos","status":409,"title":"Conflict","type":"urn:backend-academico:problema:MATRICULA_DUPLICADA","codigo":"MATRICULA_DUPLICADA"}
+
+=================== 3. Dos rechazos de seguridad de causas distintas ===================
+
+### AutenticaciÃ³n: GET /api/v1/alumnos/1 sin credenciales -> 401
+HTTP/1.1 401 
+{"timestamp":"2026-11-16T22:43:33.080Z","status":401,"error":"Unauthorized","path":"/api/v1/alumnos/1"}
+
+### CSRF: POST de docente con credenciales vÃ¡lidas pero sin token -> 403
+HTTP/1.1 403 
+{"timestamp":"2026-11-16T22:43:33.128Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+
+### Rol: POST de ALUMNO con token CSRF vÃ¡lido -> 403
+HTTP/1.1 403 
+{"timestamp":"2026-11-16T22:43:33.241Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+
+=================== 4. Mejora de acceso por propietario ===================
+
+### PreparaciÃ³n: POST A002 (docente)
+HTTP/1.1 201 
+Location: /api/v1/alumnos/2
+{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
+
+### Propietario a001 -> su ficha /alumnos/1 -> 200
+HTTP/1.1 200 
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+### a001 -> ficha ajena /alumnos/2 -> 404 (igual que inexistente)
+HTTP/1.1 404 
+{"detail":"No existe el alumno con id 2","instance":"/api/v1/alumnos/2","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+### a001 -> lista completa /alumnos -> 403
+HTTP/1.1 403 
+{"timestamp":"2026-11-16T22:43:33.657Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+
+### Docente -> /alumnos/2 -> 200
+HTTP/1.1 200 
+{"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
+
+=================== 5. Falla controlada de PostgreSQL ===================
+
+PS> docker compose stop postgres
+ Container entrega-postgres-1 Stopping 
+ Container entrega-postgres-1 Stopped 
+
+### Liveness con PostgreSQL detenido -> 200 UP (el proceso vive)
+HTTP/1.1 200 
+{"status":"UP"}
+
+### Readiness con PostgreSQL detenido -> 503 DOWN (no debe recibir trÃ¡fico)
+HTTP/1.1 503 
+{"status":"DOWN"}
+
+### Una consulta que necesita la base -> 500 ERROR_INTERNO con referencia
+HTTP/1.1 200 
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+PS> docker compose start postgres
+ Container entrega-postgres-1 Starting 
+ Container entrega-postgres-1 Started 
+
+### Readiness tras recuperar PostgreSQL -> 200 UP
+HTTP/1.1 200 
+{"status":"UP"}
+
+### La consulta vuelve a funcionar -> 200
+HTTP/1.1 200 
+{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}

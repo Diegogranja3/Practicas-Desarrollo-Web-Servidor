@@ -1,0 +1,26 @@
+﻿PS> git clone https://github.com/Diegogranja3/Practicas-Desarrollo-Web-Servidor.git entrega
+PS> cd entrega
+PS> git checkout reto-u12-entrega
+8dc35e0 Reto U12: acceso por propietario, caché configurable, guía de entrega y script de demostración
+PS> Get-ChildItem target
+(no existe: carpeta limpia, sin compilar)
+
+PS> java -version
+openjdk version "21.0.10" 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-21.0.10+7 (build 21.0.10+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.10+7 (build 21.0.10+7-LTS, mixed mode, sharing)
+
+PS> .\mvnw.cmd clean test package
+[INFO] Building backend-academico-u12 0.0.12-SNAPSHOT
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.BackendAcademicoApplicationTests
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.AccesoPorPropietarioTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.AlumnoControllerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.SeguridadTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.domain.AlumnoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.repository.PostgresIntegrationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.service.AlumnoServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.service.CalendarioClientTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Building jar: C:target\backend-academico-0.0.12-SNAPSHOT.jar
+[INFO] BUILD SUCCESS

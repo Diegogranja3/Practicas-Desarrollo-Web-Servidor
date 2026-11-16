@@ -1,0 +1,5 @@
+﻿PS> docker compose down -v      # volumen de esta prueba limpia; el del laboratorio no se toca
+Container entrega-app-1 Removed
+Container entrega-postgres-1 Removed
+Volume entrega_datos_academicos Removed
+Network entrega_default Removed
