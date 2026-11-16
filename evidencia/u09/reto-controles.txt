@@ -1,0 +1,11 @@
+# Control A: Location sin el id -> URI.create("/api/v1/alumnos/" + creado.id()) cambiado por URI.create("/api/v1/alumnos")
+1
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0 <<< FAILURE! -- in mx.edu.backendacademico.controller.AlumnoCreacionHttpTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.repository.UnicidadPostgresTest
+  AlumnoCreacionHttpTest.crearResponde201ConLocationDelRecursoCreado:34 Response header 'Location' expected:</api/v1/alumnos/42> but was:</api/v1/alumnos>
+
+# Control B: el adaptador ya no reconoce la restricción -> "uk_alumnos_matricula" cambiado por "uk_otra_restriccion"
+1
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.AlumnoCreacionHttpTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0 <<< FAILURE! -- in mx.edu.backendacademico.repository.UnicidadPostgresTest
+  UnicidadPostgresTest.laRestriccionUnicaDePostgresSeTraduceAMatriculaDuplicada:44 Unexpected exception type thrown, expected: <mx.edu.backendacademico.exception.MatriculaDuplicadaException> but was: <org.springframework.dao.DataI

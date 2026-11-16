@@ -1,0 +1,9 @@
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.BackendAcademicoApplicationTests
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.AlumnoControllerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.controller.AlumnoCreacionHttpTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.domain.AlumnoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.repository.PostgresIntegrationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.repository.UnicidadPostgresTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.service.AlumnoServiceTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
