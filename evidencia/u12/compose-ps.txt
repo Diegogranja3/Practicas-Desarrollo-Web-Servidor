@@ -1,0 +1,4 @@
+PS> docker compose ps
+SERVICE    IMAGE                                   STATUS                    PORTS
+app        practicas-desarrollo-web-servidor-app   Up 8 seconds              0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+postgres   postgres:17-alpine                      Up 45 seconds (healthy)   5432/tcp

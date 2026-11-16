@@ -1,0 +1,5 @@
+PS> docker compose logs app | Select-String ResumenProgramado
+2026-11-16T22:38:56.773Z [scheduling-1] m.e.b.service.ResumenProgramado          : Total de inscripciones=1
+
+### GET /actuator/metrics/academico.resumen.ejecuciones  (usuario admin)
+{"availableTags":[],"measurements":[{"statistic":"COUNT","value":1.0}],"name":"academico.resumen.ejecuciones"}

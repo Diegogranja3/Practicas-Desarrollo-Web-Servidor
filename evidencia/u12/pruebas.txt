@@ -1,0 +1,303 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< mx.edu:backend-academico >----------------------
+[INFO] Building backend-academico-u12 0.0.12-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/4.1.0/spring-boot-starter-actuator-4.1.0.pom
+Progress (1): 947 BProgress (1): 1.0 kBProgress (1): 3.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/4.1.0/spring-boot-starter-actuator-4.1.0.pom (3.2 kB at 9.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.1.0/spring-boot-starter-micrometer-metrics-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.1.0/spring-boot-starter-micrometer-metrics-4.1.0.pom (2.3 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-metrics/4.1.0/spring-boot-micrometer-metrics-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-metrics/4.1.0/spring-boot-micrometer-metrics-4.1.0.pom (2.5 kB at 51 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-observation/4.1.0/spring-boot-micrometer-observation-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-observation/4.1.0/spring-boot-micrometer-observation-4.1.0.pom (2.3 kB at 38 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.0/micrometer-core-1.17.0.pom
+Progress (1): 990 BProgress (1): 1.1 kBProgress (1): 5.0 kBProgress (1): 9.5 kBProgress (1): 11 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.0/micrometer-core-1.17.0.pom (11 kB at 235 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.pom
+Progress (1): 961 BProgress (1): 1.0 kBProgress (1): 2.9 kBProgress (1): 6.4 kBProgress (1): 9.0 kBProgress (1): 13 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.pom (13 kB at 282 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/4.1.0/spring-boot-actuator-autoconfigure-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/4.1.0/spring-boot-actuator-autoconfigure-4.1.0.pom (2.3 kB at 45 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/4.1.0/spring-boot-actuator-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/4.1.0/spring-boot-actuator-4.1.0.pom (2.0 kB at 43 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-health/4.1.0/spring-boot-health-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-health/4.1.0/spring-boot-health-4.1.0.pom (2.0 kB at 42 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.17.0/micrometer-jakarta9-1.17.0.pom
+Progress (1): 1.1 kBProgress (1): 1.2 kBProgress (1): 3.7 kBProgress (1): 4.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.17.0/micrometer-jakarta9-1.17.0.pom (4.1 kB at 89 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/4.1.0/spring-boot-starter-cache-4.1.0.pom
+Progress (1): 983 BProgress (1): 1.1 kBProgress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/4.1.0/spring-boot-starter-cache-4.1.0.pom (2.3 kB at 48 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cache/4.1.0/spring-boot-cache-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.2 kBProgress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cache/4.1.0/spring-boot-cache-4.1.0.pom (2.2 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.8/spring-context-support-7.0.8.pom
+Progress (1): 1.1 kBProgress (1): 1.1 kBProgress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.8/spring-context-support-7.0.8.pom (2.4 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/4.1.0/spring-boot-starter-actuator-4.1.0.jar
+Progress (1): 0.5/4.8 kBProgress (1): 4.8/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/4.1.0/spring-boot-starter-actuator-4.1.0.jar (4.8 kB at 73 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.1.0/spring-boot-starter-micrometer-metrics-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-metrics/4.1.0/spring-boot-micrometer-metrics-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-observation/4.1.0/spring-boot-micrometer-observation-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/4.1.0/spring-boot-actuator-autoconfigure-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/4.1.0/spring-boot-actuator-4.1.0.jar
+Progress (1): 4.2/248 kBProgress (1): 8.2/248 kBProgress (1): 12/248 kB Progress (1): 17/248 kBProgress (1): 21/248 kBProgress (1): 25/248 kBProgress (1): 29/248 kBProgress (1): 33/248 kBProgress (1): 37/248 kBProgress (1): 41/248 kBProgress (1): 46/248 kBProgress (1): 50/248 kBProgress (1): 54/248 kBProgress (1): 58/248 kBProgress (1): 63/248 kBProgress (1): 67/248 kBProgress (1): 71/248 kBProgress (1): 75/248 kBProgress (1): 80/248 kBProgress (1): 84/248 kBProgress (1): 88/248 kBProgress (1): 90/248 kBProgress (1): 94/248 kBProgress (1): 99/248 kBProgress (1): 103/248 kBProgress (1): 107/248 kBProgress (1): 111/248 kBProgress (1): 115/248 kBProgress (1): 120/248 kBProgress (1): 124/248 kBProgress (1): 128/248 kBProgress (1): 131/248 kBProgress (1): 135/248 kBProgress (1): 140/248 kBProgress (1): 144/248 kBProgress (1): 148/248 kBProgress (1): 152/248 kBProgress (1): 169/248 kBProgress (1): 185/248 kBProgress (1): 201/248 kBProgress (2): 201/248 kB | 0.9/141 kBProgress (2): 201/248 kB | 2.3/141 kBProgress (2): 201/248 kB | 3.6/141 kBProgress (2): 201/248 kB | 5.0/141 kBProgress (2): 201/248 kB | 6.4/141 kBProgress (2): 201/248 kB | 7.7/141 kBProgress (2): 201/248 kB | 9.1/141 kBProgress (2): 201/248 kB | 10/141 kB Progress (2): 201/248 kB | 12/141 kBProgress (2): 201/248 kB | 13/141 kBProgress (2): 201/248 kB | 15/141 kBProgress (2): 201/248 kB | 16/141 kBProgress (2): 201/248 kB | 17/141 kBProgress (2): 201/248 kB | 19/141 kBProgress (2): 201/248 kB | 20/141 kBProgress (2): 201/248 kB | 21/141 kBProgress (2): 201/248 kB | 23/141 kBProgress (2): 201/248 kB | 24/141 kBProgress (2): 201/248 kB | 26/141 kBProgress (2): 201/248 kB | 27/141 kBProgress (2): 201/248 kB | 28/141 kBProgress (2): 201/248 kB | 30/141 kBProgress (2): 201/248 kB | 31/141 kBProgress (2): 201/248 kB | 32/141 kBProgress (2): 201/248 kB | 34/141 kBProgress (2): 201/248 kB | 35/141 kBProgress (2): 201/248 kB | 36/141 kBProgress (2): 201/248 kB | 38/141 kBProgress (2): 201/248 kB | 39/141 kBProgress (2): 201/248 kB | 41/141 kBProgress (2): 201/248 kB | 42/141 kBProgress (2): 201/248 kB | 43/141 kBProgress (2): 201/248 kB | 45/141 kBProgress (2): 201/248 kB | 46/141 kBProgress (2): 201/248 kB | 47/141 kBProgress (2): 201/248 kB | 49/141 kBProgress (2): 201/248 kB | 50/141 kBProgress (2): 201/248 kB | 52/141 kBProgress (2): 201/248 kB | 53/141 kBProgress (2): 201/248 kB | 54/141 kBProgress (2): 201/248 kB | 56/141 kBProgress (3): 201/248 kB | 56/141 kB | 0.9/357 kBProgress (3): 201/248 kB | 56/141 kB | 2.3/357 kBProgress (3): 201/248 kB | 56/141 kB | 3.6/357 kBProgress (3): 201/248 kB | 56/141 kB | 5.0/357 kBProgress (3): 201/248 kB | 56/141 kB | 6.4/357 kBProgress (3): 201/248 kB | 56/141 kB | 7.7/357 kBProgress (3): 201/248 kB | 56/141 kB | 9.1/357 kBProgress (3): 201/248 kB | 56/141 kB | 10/357 kB Progress (3): 201/248 kB | 56/141 kB | 12/357 kBProgress (3): 201/248 kB | 60/141 kB | 12/357 kBProgress (3): 201/248 kB | 60/141 kB | 13/357 kBProgress (3): 201/248 kB | 60/141 kB | 15/357 kBProgress (3): 201/248 kB | 60/141 kB | 16/357 kBProgress (3): 201/248 kB | 60/141 kB | 17/357 kBProgress (3): 201/248 kB | 60/141 kB | 19/357 kBProgress (3): 201/248 kB | 60/141 kB | 20/357 kBProgress (3): 201/248 kB | 60/141 kB | 21/357 kBProgress (3): 201/248 kB | 60/141 kB | 23/357 kBProgress (3): 201/248 kB | 60/141 kB | 24/357 kBProgress (3): 201/248 kB | 60/141 kB | 25/357 kBProgress (3): 201/248 kB | 60/141 kB | 27/357 kBProgress (3): 201/248 kB | 60/141 kB | 28/357 kBProgress (3): 201/248 kB | 60/141 kB | 30/357 kBProgress (3): 201/248 kB | 60/141 kB | 31/357 kBProgress (3): 201/248 kB | 60/141 kB | 32/357 kBProgress (3): 201/248 kB | 60/141 kB | 34/357 kBProgress (3): 201/248 kB | 60/141 kB | 35/357 kBProgress (3): 201/248 kB | 60/141 kB | 36/357 kBProgress (3): 201/248 kB | 60/141 kB | 38/357 kBProgress (3): 201/248 kB | 60/141 kB | 39/357 kBProgress (3): 201/248 kB | 60/141 kB | 41/357 kBProgress (3): 201/248 kB | 60/141 kB | 42/357 kBProgress (3): 201/248 kB | 60/141 kB | 43/357 kBProgress (3): 201/248 kB | 60/141 kB | 45/357 kBProgress (3): 201/248 kB | 60/141 kB | 46/357 kBProgress (3): 201/248 kB | 60/141 kB | 47/357 kBProgress (3): 201/248 kB | 60/141 kB | 49/357 kBProgress (3): 201/248 kB | 60/141 kB | 50/357 kBProgress (3): 201/248 kB | 60/141 kB | 51/357 kBProgress (3): 201/248 kB | 60/141 kB | 53/357 kBProgress (3): 201/248 kB | 60/141 kB | 54/357 kBProgress (3): 201/248 kB | 60/141 kB | 56/357 kBProgress (3): 201/248 kB | 60/141 kB | 57/357 kBProgress (3): 205/248 kB | 60/141 kB | 57/357 kBProgress (3): 205/248 kB | 60/141 kB | 61/357 kBProgress (4): 205/248 kB | 60/141 kB | 61/357 kB | 0.9/4.7 kBProgress (4): 205/248 kB | 60/141 kB | 61/357 kB | 2.3/4.7 kBProgress (4): 205/248 kB | 60/141 kB | 61/357 kB | 3.6/4.7 kBProgress (4): 205/248 kB | 60/141 kB | 61/357 kB | 4.7 kB    Progress (4): 221/248 kB | 60/141 kB | 61/357 kB | 4.7 kBProgress (4): 238/248 kB | 60/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 60/141 kB | 61/357 kB | 4.7 kB    Progress (4): 248 kB | 64/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 68/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 73/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 77/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 81/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 82/141 kB | 61/357 kB | 4.7 kBProgress (4): 248 kB | 86/141 kB | 61/357 kB | 4.7 kB                                                     Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.1.0/spring-boot-starter-micrometer-metrics-4.1.0.jar (4.7 kB at 33 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-health/4.1.0/spring-boot-health-4.1.0.jar
+Progress (3): 248 kB | 90/141 kB | 61/357 kBProgress (3): 248 kB | 95/141 kB | 61/357 kBProgress (3): 248 kB | 99/141 kB | 61/357 kB                                            Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-metrics/4.1.0/spring-boot-micrometer-metrics-4.1.0.jar (248 kB at 1.7 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.17.0/micrometer-jakarta9-1.17.0.jar
+Progress (2): 103/141 kB | 61/357 kBProgress (2): 107/141 kB | 61/357 kBProgress (2): 107/141 kB | 65/357 kBProgress (2): 107/141 kB | 70/357 kBProgress (2): 107/141 kB | 74/357 kBProgress (2): 112/141 kB | 74/357 kBProgress (2): 116/141 kB | 74/357 kBProgress (2): 120/141 kB | 74/357 kBProgress (2): 120/141 kB | 78/357 kBProgress (2): 120/141 kB | 82/357 kBProgress (2): 120/141 kB | 86/357 kBProgress (2): 124/141 kB | 86/357 kBProgress (2): 124/141 kB | 91/357 kBProgress (2): 124/141 kB | 95/357 kBProgress (2): 124/141 kB | 99/357 kBProgress (2): 124/141 kB | 103/357 kBProgress (2): 124/141 kB | 108/357 kBProgress (2): 124/141 kB | 112/357 kBProgress (2): 124/141 kB | 116/357 kBProgress (2): 124/141 kB | 120/357 kBProgress (2): 124/141 kB | 122/357 kBProgress (2): 124/141 kB | 127/357 kBProgress (2): 124/141 kB | 131/357 kBProgress (2): 124/141 kB | 135/357 kBProgress (2): 124/141 kB | 139/357 kBProgress (2): 124/141 kB | 144/357 kBProgress (2): 128/141 kB | 144/357 kBProgress (2): 133/141 kB | 144/357 kBProgress (2): 137/141 kB | 144/357 kBProgress (2): 141 kB | 144/357 kB    Progress (2): 141 kB | 148/357 kBProgress (2): 141 kB | 152/357 kBProgress (2): 141 kB | 156/357 kBProgress (2): 141 kB | 160/357 kBProgress (2): 141 kB | 165/357 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/4.1.0/spring-boot-actuator-autoconfigure-4.1.0.jar (141 kB at 784 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.0/micrometer-core-1.17.0.jar
+Progress (1): 169/357 kBProgress (1): 173/357 kBProgress (1): 177/357 kBProgress (1): 182/357 kBProgress (1): 186/357 kBProgress (1): 188/357 kBProgress (2): 188/357 kB | 0.9/29 kBProgress (2): 188/357 kB | 2.3/29 kBProgress (2): 188/357 kB | 3.6/29 kBProgress (2): 188/357 kB | 5.0/29 kBProgress (2): 188/357 kB | 6.4/29 kBProgress (2): 188/357 kB | 7.7/29 kBProgress (2): 188/357 kB | 9.1/29 kBProgress (2): 188/357 kB | 10/29 kB Progress (2): 188/357 kB | 12/29 kBProgress (2): 188/357 kB | 13/29 kBProgress (2): 188/357 kB | 15/29 kBProgress (2): 190/357 kB | 15/29 kBProgress (2): 190/357 kB | 16/29 kBProgress (2): 194/357 kB | 16/29 kBProgress (2): 194/357 kB | 17/29 kBProgress (2): 194/357 kB | 19/29 kBProgress (2): 194/357 kB | 20/29 kBProgress (2): 194/357 kB | 21/29 kBProgress (2): 194/357 kB | 23/29 kBProgress (2): 194/357 kB | 24/29 kBProgress (2): 194/357 kB | 25/29 kBProgress (2): 199/357 kB | 25/29 kBProgress (2): 203/357 kB | 25/29 kBProgress (2): 207/357 kB | 25/29 kBProgress (2): 207/357 kB | 27/29 kBProgress (2): 207/357 kB | 28/29 kBProgress (2): 207/357 kB | 29 kB   Progress (2): 211/357 kB | 29 kBProgress (2): 215/357 kB | 29 kBProgress (2): 220/357 kB | 29 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-micrometer-observation/4.1.0/spring-boot-micrometer-observation-4.1.0.jar (29 kB at 137 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar
+Progress (2): 220/357 kB | 16/155 kBProgress (2): 220/357 kB | 25/155 kBProgress (2): 236/357 kB | 25/155 kBProgress (2): 252/357 kB | 25/155 kBProgress (2): 252/357 kB | 41/155 kBProgress (2): 269/357 kB | 41/155 kBProgress (2): 269/357 kB | 57/155 kBProgress (3): 269/357 kB | 57/155 kB | 0.9/55 kBProgress (3): 269/357 kB | 57/155 kB | 2.3/55 kBProgress (3): 269/357 kB | 57/155 kB | 3.6/55 kBProgress (3): 269/357 kB | 57/155 kB | 5.0/55 kBProgress (3): 269/357 kB | 57/155 kB | 6.4/55 kBProgress (3): 269/357 kB | 57/155 kB | 7.7/55 kBProgress (3): 269/357 kB | 57/155 kB | 9.1/55 kBProgress (3): 269/357 kB | 57/155 kB | 10/55 kB Progress (3): 269/357 kB | 57/155 kB | 12/55 kBProgress (3): 269/357 kB | 57/155 kB | 13/55 kBProgress (3): 269/357 kB | 57/155 kB | 15/55 kBProgress (3): 269/357 kB | 57/155 kB | 16/55 kBProgress (3): 269/357 kB | 57/155 kB | 17/55 kBProgress (3): 269/357 kB | 57/155 kB | 19/55 kBProgress (3): 269/357 kB | 57/155 kB | 20/55 kBProgress (3): 269/357 kB | 57/155 kB | 21/55 kBProgress (3): 269/357 kB | 57/155 kB | 23/55 kBProgress (3): 269/357 kB | 57/155 kB | 24/55 kBProgress (3): 269/357 kB | 57/155 kB | 26/55 kBProgress (3): 269/357 kB | 57/155 kB | 27/55 kBProgress (3): 269/357 kB | 57/155 kB | 28/55 kBProgress (3): 269/357 kB | 57/155 kB | 30/55 kBProgress (3): 269/357 kB | 57/155 kB | 31/55 kBProgress (3): 269/357 kB | 74/155 kB | 31/55 kBProgress (3): 269/357 kB | 74/155 kB | 32/55 kBProgress (3): 269/357 kB | 74/155 kB | 34/55 kBProgress (3): 269/357 kB | 74/155 kB | 35/55 kBProgress (3): 269/357 kB | 74/155 kB | 36/55 kBProgress (3): 269/357 kB | 74/155 kB | 38/55 kBProgress (3): 269/357 kB | 74/155 kB | 39/55 kBProgress (3): 269/357 kB | 74/155 kB | 41/55 kBProgress (3): 269/357 kB | 74/155 kB | 42/55 kBProgress (3): 269/357 kB | 74/155 kB | 43/55 kBProgress (3): 269/357 kB | 90/155 kB | 43/55 kBProgress (3): 285/357 kB | 90/155 kB | 43/55 kBProgress (3): 285/357 kB | 90/155 kB | 45/55 kBProgress (3): 285/357 kB | 90/155 kB | 46/55 kBProgress (3): 285/357 kB | 90/155 kB | 47/55 kBProgress (3): 285/357 kB | 90/155 kB | 49/55 kBProgress (3): 285/357 kB | 90/155 kB | 50/55 kBProgress (3): 285/357 kB | 90/155 kB | 54/55 kBProgress (3): 285/357 kB | 90/155 kB | 55 kB   Progress (3): 302/357 kB | 90/155 kB | 55 kBProgress (3): 302/357 kB | 106/155 kB | 55 kB                                             Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.17.0/micrometer-jakarta9-1.17.0.jar (55 kB at 213 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/4.1.0/spring-boot-starter-cache-4.1.0.jar
+Progress (2): 302/357 kB | 123/155 kBProgress (2): 302/357 kB | 139/155 kBProgress (2): 302/357 kB | 155 kB    Progress (2): 318/357 kB | 155 kBProgress (2): 319/357 kB | 155 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-health/4.1.0/spring-boot-health-4.1.0.jar (155 kB at 575 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cache/4.1.0/spring-boot-cache-4.1.0.jar
+Progress (2): 319/357 kB | 3.8/915 kBProgress (2): 319/357 kB | 8.0/915 kBProgress (2): 319/357 kB | 12/915 kB Progress (2): 319/357 kB | 16/915 kBProgress (2): 319/357 kB | 21/915 kBProgress (2): 319/357 kB | 25/915 kBProgress (2): 335/357 kB | 25/915 kBProgress (2): 335/357 kB | 29/915 kBProgress (2): 335/357 kB | 33/915 kBProgress (2): 335/357 kB | 37/915 kBProgress (2): 335/357 kB | 41/915 kBProgress (2): 335/357 kB | 46/915 kBProgress (2): 335/357 kB | 50/915 kBProgress (2): 335/357 kB | 54/915 kBProgress (2): 335/357 kB | 57/915 kBProgress (2): 335/357 kB | 62/915 kBProgress (2): 335/357 kB | 66/915 kBProgress (2): 335/357 kB | 70/915 kBProgress (2): 335/357 kB | 74/915 kBProgress (2): 335/357 kB | 78/915 kBProgress (2): 335/357 kB | 95/915 kBProgress (2): 352/357 kB | 95/915 kBProgress (2): 357 kB | 95/915 kB    Progress (2): 357 kB | 111/915 kBProgress (3): 357 kB | 111/915 kB | 1.4/177 kBProgress (3): 357 kB | 111/915 kB | 2.7/177 kBProgress (3): 357 kB | 111/915 kB | 4.1/177 kBProgress (3): 357 kB | 111/915 kB | 5.5/177 kBProgress (3): 357 kB | 111/915 kB | 6.8/177 kBProgress (3): 357 kB | 111/915 kB | 8.2/177 kBProgress (3): 357 kB | 111/915 kB | 9.6/177 kBProgress (3): 357 kB | 111/915 kB | 11/177 kB Progress (3): 357 kB | 111/915 kB | 12/177 kBProgress (3): 357 kB | 111/915 kB | 14/177 kBProgress (3): 357 kB | 111/915 kB | 15/177 kBProgress (3): 357 kB | 111/915 kB | 16/177 kBProgress (3): 357 kB | 111/915 kB | 18/177 kBProgress (3): 357 kB | 111/915 kB | 19/177 kBProgress (3): 357 kB | 111/915 kB | 21/177 kBProgress (3): 357 kB | 111/915 kB | 22/177 kBProgress (3): 357 kB | 111/915 kB | 23/177 kBProgress (3): 357 kB | 111/915 kB | 25/177 kBProgress (3): 357 kB | 111/915 kB | 29/177 kB                                             Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/4.1.0/spring-boot-actuator-4.1.0.jar (357 kB at 1.2 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.8/spring-context-support-7.0.8.jar
+Progress (2): 111/915 kB | 33/177 kBProgress (2): 111/915 kB | 37/177 kBProgress (2): 111/915 kB | 41/177 kBProgress (2): 111/915 kB | 46/177 kBProgress (2): 111/915 kB | 50/177 kBProgress (2): 111/915 kB | 54/177 kBProgress (2): 111/915 kB | 57/177 kBProgress (2): 111/915 kB | 62/177 kBProgress (2): 128/915 kB | 62/177 kBProgress (2): 144/915 kB | 62/177 kBProgress (2): 160/915 kB | 62/177 kBProgress (2): 177/915 kB | 62/177 kBProgress (2): 188/915 kB | 62/177 kBProgress (2): 193/915 kB | 62/177 kBProgress (3): 193/915 kB | 62/177 kB | 3.8/4.7 kBProgress (3): 193/915 kB | 62/177 kB | 4.7 kB    Progress (3): 193/915 kB | 66/177 kB | 4.7 kBProgress (3): 210/915 kB | 66/177 kB | 4.7 kBProgress (3): 210/915 kB | 70/177 kB | 4.7 kBProgress (3): 210/915 kB | 74/177 kB | 4.7 kBProgress (3): 210/915 kB | 78/177 kB | 4.7 kBProgress (3): 210/915 kB | 83/177 kB | 4.7 kBProgress (4): 210/915 kB | 83/177 kB | 4.7 kB | 7.7/82 kBProgress (4): 210/915 kB | 83/177 kB | 4.7 kB | 16/82 kB Progress (4): 210/915 kB | 83/177 kB | 4.7 kB | 24/82 kB                                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/4.1.0/spring-boot-starter-cache-4.1.0.jar (4.7 kB at 14 kB/s)
+Progress (3): 226/915 kB | 83/177 kB | 24/82 kBProgress (3): 226/915 kB | 87/177 kB | 24/82 kBProgress (3): 226/915 kB | 91/177 kB | 24/82 kBProgress (3): 226/915 kB | 95/177 kB | 24/82 kBProgress (3): 226/915 kB | 95/177 kB | 40/82 kBProgress (3): 226/915 kB | 100/177 kB | 40/82 kBProgress (3): 226/915 kB | 104/177 kB | 40/82 kBProgress (3): 226/915 kB | 104/177 kB | 57/82 kBProgress (3): 242/915 kB | 104/177 kB | 57/82 kBProgress (3): 242/915 kB | 108/177 kB | 57/82 kBProgress (3): 242/915 kB | 112/177 kB | 57/82 kBProgress (3): 242/915 kB | 117/177 kB | 57/82 kBProgress (3): 242/915 kB | 121/177 kB | 57/82 kBProgress (3): 242/915 kB | 123/177 kB | 57/82 kBProgress (3): 242/915 kB | 123/177 kB | 73/82 kBProgress (3): 242/915 kB | 127/177 kB | 73/82 kBProgress (3): 242/915 kB | 127/177 kB | 82 kB   Progress (3): 259/915 kB | 127/177 kB | 82 kBProgress (3): 275/915 kB | 127/177 kB | 82 kB                                             Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cache/4.1.0/spring-boot-cache-4.1.0.jar (82 kB at 225 kB/s)
+Progress (2): 291/915 kB | 127/177 kBProgress (3): 291/915 kB | 127/177 kB | 16/178 kBProgress (3): 291/915 kB | 127/177 kB | 33/178 kBProgress (3): 291/915 kB | 127/177 kB | 49/178 kBProgress (3): 291/915 kB | 127/177 kB | 66/178 kBProgress (3): 291/915 kB | 127/177 kB | 82/178 kBProgress (3): 291/915 kB | 127/177 kB | 98/178 kBProgress (3): 291/915 kB | 127/177 kB | 115/178 kBProgress (3): 308/915 kB | 127/177 kB | 115/178 kBProgress (3): 308/915 kB | 131/177 kB | 115/178 kBProgress (3): 308/915 kB | 136/177 kB | 115/178 kBProgress (3): 308/915 kB | 136/177 kB | 131/178 kBProgress (3): 308/915 kB | 140/177 kB | 131/178 kBProgress (3): 308/915 kB | 144/177 kB | 131/178 kBProgress (3): 319/915 kB | 144/177 kB | 131/178 kBProgress (3): 319/915 kB | 144/177 kB | 147/178 kBProgress (3): 319/915 kB | 148/177 kB | 147/178 kBProgress (3): 319/915 kB | 152/177 kB | 147/178 kBProgress (3): 319/915 kB | 157/177 kB | 147/178 kBProgress (3): 336/915 kB | 157/177 kB | 147/178 kBProgress (3): 336/915 kB | 161/177 kB | 147/178 kBProgress (3): 336/915 kB | 165/177 kB | 147/178 kBProgress (3): 336/915 kB | 165/177 kB | 164/178 kBProgress (3): 336/915 kB | 165/177 kB | 164/178 kBProgress (3): 336/915 kB | 169/177 kB | 164/178 kBProgress (3): 352/915 kB | 169/177 kB | 164/178 kBProgress (3): 352/915 kB | 174/177 kB | 164/178 kBProgress (3): 352/915 kB | 177 kB | 164/178 kB    Progress (3): 352/915 kB | 177 kB | 178 kB    Progress (3): 369/915 kB | 177 kB | 178 kBProgress (3): 385/915 kB | 177 kB | 178 kBProgress (3): 401/915 kB | 177 kB | 178 kBProgress (3): 418/915 kB | 177 kB | 178 kB                                          Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar (177 kB at 379 kB/s)
+Progress (2): 434/915 kB | 178 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.8/spring-context-support-7.0.8.jar (178 kB at 380 kB/s)
+Progress (1): 451/915 kBProgress (1): 467/915 kBProgress (1): 483/915 kBProgress (1): 500/915 kBProgress (1): 516/915 kBProgress (1): 532/915 kBProgress (1): 549/915 kBProgress (1): 565/915 kBProgress (1): 582/915 kBProgress (1): 598/915 kBProgress (1): 614/915 kBProgress (1): 631/915 kBProgress (1): 647/915 kBProgress (1): 664/915 kBProgress (1): 680/915 kBProgress (1): 696/915 kBProgress (1): 713/915 kBProgress (1): 729/915 kBProgress (1): 745/915 kBProgress (1): 762/915 kBProgress (1): 778/915 kBProgress (1): 795/915 kBProgress (1): 811/915 kBProgress (1): 827/915 kBProgress (1): 844/915 kBProgress (1): 860/915 kBProgress (1): 877/915 kBProgress (1): 893/915 kBProgress (1): 909/915 kBProgress (1): 915 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.0/micrometer-core-1.17.0.jar (915 kB at 1.4 MB/s)
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ backend-academico ---
+[INFO] Deleting C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend-academico ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 37 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend-academico ---
+[INFO] skip non existing resourceDirectory C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 7 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backend-academico ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running mx.edu.backendacademico.BackendAcademicoApplicationTests
+16:35:49.697 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.backendacademico.BackendAcademicoApplicationTests]: BackendAcademicoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:35:49.797 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.BackendAcademicoApplicationTests
+16:35:49.883 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.backendacademico.BackendAcademicoApplicationTests]: BackendAcademicoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:35:49.884 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.BackendAcademicoApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-16T16:35:50.221-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplicationTests   : Starting BackendAcademicoApplicationTests using Java 21.0.10 with PID 33304 (started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-11-16T16:35:50.224-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplicationTests   : No active profile set, falling back to 1 default profile: "jpa"
+2026-11-16T16:35:51.362-06:00  INFO 33304 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T16:35:51.445-06:00  INFO 33304 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2026-11-16T16:35:52.385-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-16T16:35:52.494-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-11-16T16:35:53.190-06:00  INFO 33304 --- [backend-academico] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T16:35:53.222-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T16:35:53.450-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:contexto user=SA
+2026-11-16T16:35:53.451-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T16:35:53.502-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:contexto]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CONTEXTO/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T16:35:54.401-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T16:35:54.454-06:00  INFO 33304 --- [backend-academico] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T16:35:54.471-06:00  INFO 33304 --- [backend-academico] [           main] m.e.backendacademico.config.CicloDeVida  : Bean inicializado en 2026-11-16T22:35:54.471635700Z
+2026-11-16T16:35:54.601-06:00  INFO 33304 --- [backend-academico] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T16:35:56.221-06:00  INFO 33304 --- [backend-academico] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-11-16T16:35:57.339-06:00  INFO 33304 --- [backend-academico] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-16T16:35:57.443-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.BackendAcademicoApplicationTests   : Started BackendAcademicoApplicationTests in 7.492 seconds (process running for 8.673)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\Diego\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.10\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.449 s -- in mx.edu.backendacademico.BackendAcademicoApplicationTests
+[INFO] Running mx.edu.backendacademico.controller.AlumnoControllerTest
+2026-11-16T16:35:57.914-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.controller.AlumnoControllerTest]: AlumnoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:35:57.968-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.controller.AlumnoControllerTest
+2026-11-16T16:35:57.970-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.controller.AlumnoControllerTest]: AlumnoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:35:57.979-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.controller.AlumnoControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-16T16:35:58.022-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.AlumnoControllerTest    : Starting AlumnoControllerTest using Java 21.0.10 with PID 33304 (started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-11-16T16:35:58.022-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.AlumnoControllerTest    : No active profile set, falling back to 1 default profile: "jpa"
+2026-11-16T16:35:58.676-06:00  WARN 33304 --- [backend-academico] [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6bd0b1a6-d542-4b2e-b1a5-69d7874e9677
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-16T16:35:58.727-06:00  INFO 33304 --- [backend-academico] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T16:35:58.727-06:00  INFO 33304 --- [backend-academico] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T16:35:58.730-06:00  INFO 33304 --- [backend-academico] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-16T16:35:58.767-06:00  INFO 33304 --- [backend-academico] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-16T16:35:58.872-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.AlumnoControllerTest    : Started AlumnoControllerTest in 0.885 seconds (process running for 10.102)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.609 s -- in mx.edu.backendacademico.controller.AlumnoControllerTest
+[INFO] Running mx.edu.backendacademico.controller.SeguridadTest
+2026-11-16T16:35:59.528-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.controller.SeguridadTest]: SeguridadTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:35:59.551-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.controller.SeguridadTest
+2026-11-16T16:35:59.554-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.controller.SeguridadTest]: SeguridadTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:35:59.568-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.controller.SeguridadTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-16T16:35:59.639-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.SeguridadTest           : Starting SeguridadTest using Java 21.0.10 with PID 33304 (started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-11-16T16:35:59.640-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.SeguridadTest           : No active profile set, falling back to 1 default profile: "jpa"
+2026-11-16T16:36:00.395-06:00  INFO 33304 --- [backend-academico] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-11-16T16:36:00.500-06:00  INFO 33304 --- [backend-academico] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T16:36:00.501-06:00  INFO 33304 --- [backend-academico] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T16:36:00.503-06:00  INFO 33304 --- [backend-academico] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-16T16:36:00.522-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.controller.SeguridadTest           : Started SeguridadTest in 0.944 seconds (process running for 11.751)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.337 s -- in mx.edu.backendacademico.controller.SeguridadTest
+[INFO] Running mx.edu.backendacademico.domain.AlumnoTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in mx.edu.backendacademico.domain.AlumnoTest
+[INFO] Running mx.edu.backendacademico.repository.PostgresIntegrationTest
+2026-11-16T16:36:00.912-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.repository.PostgresIntegrationTest]: PostgresIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:36:00.929-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.repository.PostgresIntegrationTest
+2026-11-16T16:36:00.931-06:00  INFO 33304 --- [backend-academico] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.backendacademico.repository.PostgresIntegrationTest]: PostgresIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T16:36:00.932-06:00  INFO 33304 --- [backend-academico] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.repository.PostgresIntegrationTest
+2026-11-16T16:36:00.977-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-11-16T16:36:00.981-06:00  INFO 33304 --- [backend-academico] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-11-16T16:36:00.999-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-11-16T16:36:01.484-06:00  INFO 33304 --- [backend-academico] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-11-16T16:36:02.129-06:00  INFO 33304 --- [backend-academico] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2026-11-16T16:36:02.130-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-11-16T16:36:02.151-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.4.3
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 7777 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-11-16T16:36:02.249-06:00  INFO 33304 --- [backend-academico] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-11-16T16:36:02.347-06:00  INFO 33304 --- [backend-academico] [           main] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-11-16T16:36:02.564-06:00  INFO 33304 --- [backend-academico] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 56951064bcd6938aa660970d3ce95fa3ac8d884e072a6d9ceb05cebbf52a9295
+2026-11-16T16:36:03.054-06:00  INFO 33304 --- [backend-academico] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT0.804896S
+2026-11-16T16:36:03.071-06:00  INFO 33304 --- [backend-academico] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-11-16T16:36:03.071-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-11-16T16:36:03.072-06:00  INFO 33304 --- [backend-academico] [           main] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2026-11-16T16:36:03.073-06:00  INFO 33304 --- [backend-academico] [           main] tc.postgres:17-alpine                    : Creating container for image: postgres:17-alpine
+2026-11-16T16:36:03.235-06:00  INFO 33304 --- [backend-academico] [           main] tc.postgres:17-alpine                    : Container postgres:17-alpine is starting: 6fd1da382cb8081e25e0b600690401c40c03dd8b0c190f3afe3afc85906915bd
+2026-11-16T16:36:05.212-06:00  INFO 33304 --- [backend-academico] [           main] tc.postgres:17-alpine                    : Container postgres:17-alpine started in PT2.1394734S
+2026-11-16T16:36:05.214-06:00  INFO 33304 --- [backend-academico] [           main] tc.postgres:17-alpine                    : Container is started (JDBC URL: jdbc:postgresql://localhost:61105/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-16T16:36:05.252-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.r.PostgresIntegrationTest          : Starting PostgresIntegrationTest using Java 21.0.10 with PID 33304 (started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-11-16T16:36:05.253-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.r.PostgresIntegrationTest          : No active profile set, falling back to 1 default profile: "jpa"
+2026-11-16T16:36:05.616-06:00  INFO 33304 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T16:36:05.640-06:00  INFO 33304 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2026-11-16T16:36:06.002-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-16T16:36:06.190-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@fe618cc
+2026-11-16T16:36:06.191-06:00  INFO 33304 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-16T16:36:06.230-06:00  INFO 33304 --- [backend-academico] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:61105/test?loggerLevel=OFF (PostgreSQL 17.11)
+2026-11-16T16:36:06.332-06:00  INFO 33304 --- [backend-academico] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-16T16:36:06.339-06:00  INFO 33304 --- [backend-academico] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.032s)
+2026-11-16T16:36:06.361-06:00  INFO 33304 --- [backend-academico] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-16T16:36:06.432-06:00  INFO 33304 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-16T16:36:06.450-06:00  INFO 33304 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - crear alumnos"
+2026-11-16T16:36:06.497-06:00  INFO 33304 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - crear materias e inscripciones"
+2026-11-16T16:36:06.530-06:00  INFO 33304 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.037s)
+2026-11-16T16:36:06.578-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-16T16:36:06.621-06:00  INFO 33304 --- [backend-academico] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T16:36:06.644-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:61105/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T16:36:06.796-06:00  INFO 33304 --- [backend-academico] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T16:36:06.841-06:00  INFO 33304 --- [backend-academico] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T16:36:06.845-06:00  INFO 33304 --- [backend-academico] [           main] m.e.backendacademico.config.CicloDeVida  : Bean inicializado en 2026-11-16T22:36:06.845239Z
+2026-11-16T16:36:07.142-06:00  INFO 33304 --- [backend-academico] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-11-16T16:36:07.350-06:00  INFO 33304 --- [backend-academico] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-16T16:36:07.365-06:00  INFO 33304 --- [backend-academico] [           main] m.e.b.r.PostgresIntegrationTest          : Started PostgresIntegrationTest in 2.145 seconds (process running for 18.595)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.277 s -- in mx.edu.backendacademico.repository.PostgresIntegrationTest
+[INFO] Running mx.edu.backendacademico.service.AlumnoServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 s -- in mx.edu.backendacademico.service.AlumnoServiceTest
+[INFO] Running mx.edu.backendacademico.service.CalendarioClientTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in mx.edu.backendacademico.service.CalendarioClientTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend-academico ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 37 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend-academico ---
+[INFO] skip non existing resourceDirectory C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 7 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backend-academico ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ backend-academico ---
+[INFO] Building jar: C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.12-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.0:repackage (repackage) @ backend-academico ---
+[INFO] Replacing main artifact C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.12-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\target\backend-academico-0.0.12-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.608 s
+[INFO] Finished at: 2026-11-16T16:36:12-06:00
+[INFO] ------------------------------------------------------------------------

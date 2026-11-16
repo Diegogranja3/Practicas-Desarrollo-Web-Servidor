@@ -1,0 +1,6 @@
+PS> docker compose build
+ Image practicas-desarrollo-web-servidor-app Built 
+[1/3] FROM docker.io/library/eclipse-temurin:25-jre@sha256:945247f9d092703e0c6be92243ef3c51640229e23ab34d353c8dcdc73e6cd4e6
+[3/3] COPY target/backend-academico-0.0.12-SNAPSHOT.jar app.jar
+exporting to image
+naming to docker.io/library/practicas-desarrollo-web-servidor-app:latest done

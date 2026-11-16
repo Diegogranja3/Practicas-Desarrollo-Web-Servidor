@@ -1,0 +1,6 @@
+PS> docker compose logs app
+m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.12-SNAPSHOT using Java 25.0.5 with PID 1 (/app/app.jar started by root in /app)
+o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2
+o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 6.927 seconds (process running for 7.501)

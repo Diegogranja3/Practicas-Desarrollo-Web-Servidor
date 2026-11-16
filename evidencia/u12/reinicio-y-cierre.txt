@@ -1,0 +1,26 @@
+# Antes de reiniciar
+### GET /api/v1/alumnos/6
+{"id":6,"matricula":"A031","nombre":"Katherine G. Johnson","correo":"kjohnson@universidad.mx","estatus":"ACTIVO"}
+
+PS> docker compose restart app
+ Container practicas-desarrollo-web-servidor-app-1 Restarting 
+ Container practicas-desarrollo-web-servidor-app-1 Started 
+
+# Después de reiniciar la aplicación (la caché local se perdió; el dato viene de PostgreSQL)
+### GET /api/v1/alumnos/6
+{"id":6,"matricula":"A031","nombre":"Katherine G. Johnson","correo":"kjohnson@universidad.mx","estatus":"ACTIVO"}
+
+PS> docker compose down          # sin -v: el volumen se conserva
+ Container practicas-desarrollo-web-servidor-app-1 Stopping 
+ Container practicas-desarrollo-web-servidor-app-1 Stopped 
+ Container practicas-desarrollo-web-servidor-app-1 Removing 
+ Container practicas-desarrollo-web-servidor-app-1 Removed 
+ Container practicas-desarrollo-web-servidor-postgres-1 Stopping 
+ Container practicas-desarrollo-web-servidor-postgres-1 Stopped 
+ Container practicas-desarrollo-web-servidor-postgres-1 Removing 
+ Container practicas-desarrollo-web-servidor-postgres-1 Removed 
+ Network practicas-desarrollo-web-servidor_default Removing 
+ Network practicas-desarrollo-web-servidor_default Removed 
+
+PS> docker volume ls
+practicas-desarrollo-web-servidor_datos_academicos

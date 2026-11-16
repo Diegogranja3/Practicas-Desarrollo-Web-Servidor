@@ -1,0 +1,8 @@
+PS> docker compose up -d
+ Container practicas-desarrollo-web-servidor-postgres-1 Running 
+ Container practicas-desarrollo-web-servidor-app-1 Recreate 
+ Container practicas-desarrollo-web-servidor-app-1 Recreated 
+ Container practicas-desarrollo-web-servidor-postgres-1 Waiting 
+ Container practicas-desarrollo-web-servidor-postgres-1 Healthy 
+ Container practicas-desarrollo-web-servidor-app-1 Starting 
+ Container practicas-desarrollo-web-servidor-app-1 Started 

@@ -42,3 +42,13 @@ Authorization: Basic docente docente123
 DELETE http://localhost:8080/api/v1/alumnos/2
 Authorization: Basic docente docente123
 X-CSRF-TOKEN: {{csrf}}
+
+### Salud pública sin detalles internos
+GET http://localhost:8080/actuator/health
+
+### Readiness comprueba también PostgreSQL
+GET http://localhost:8080/actuator/health/readiness
+
+### Métricas reservadas a ADMIN
+GET http://localhost:8080/actuator/metrics
+Authorization: Basic admin admin123
