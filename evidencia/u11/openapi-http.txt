@@ -1,0 +1,22 @@
+### GET /openapi.yaml  (sin credenciales)
+HTTP/1.1 200 
+Content-Type: application/octet-stream
+
+# Primeras líneas del documento publicado
+openapi: 3.1.0
+info:
+  title: Backend Académico
+  version: 1.0.0
+  description: API del laboratorio. HTTP Basic con CSRF y cookie de sesión para escrituras.
+servers:
+
+# Rutas y operaciones declaradas en el documento
+  GET     /api/v1/saludo
+  GET     /api/v1/csrf
+  GET     /api/v1/alumnos
+  POST    /api/v1/alumnos
+  GET     /api/v1/alumnos/{id}
+  PUT     /api/v1/alumnos/{id}
+  DELETE  /api/v1/alumnos/{id}
+  POST    /api/v1/inscripciones
+  GET     /api/v1/inscripciones/alumno/{alumnoId}
