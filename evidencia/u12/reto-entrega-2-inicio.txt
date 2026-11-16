@@ -1,6 +1,4 @@
 ﻿PS> docker compose build
-#9 naming to docker.io/library/entrega-app:latest
-#9 naming to docker.io/library/entrega-app:latest done
 Image entrega-app Built
 PS> docker compose up -d
 Network entrega_default Created
@@ -12,12 +10,12 @@ Container entrega-postgres-1 Healthy
 Container entrega-app-1 Started
 PS> docker compose ps
 SERVICE    STATUS                    PORTS
-app        Up 8 seconds              0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
-postgres   Up 14 seconds (healthy)   5432/tcp
+app        Up 10 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+postgres   Up 16 seconds (healthy)   5432/tcp
 PS> docker compose logs app  (extracto)
 m.e.b.BackendAcademicoApplication        : Starting BackendAcademicoApplication v0.0.12-SNAPSHOT using Java 25.0.5 with PID 1 (/app/app.jar started by root in /app)
 o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
 o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - crear alumnos"
 o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - crear materias e inscripciones"
 o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.030s)
-m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 7.127 seconds (process running for 7.737)
+m.e.b.BackendAcademicoApplication        : Started BackendAcademicoApplication in 8.116 seconds (process running for 8.641)

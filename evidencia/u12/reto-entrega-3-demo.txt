@@ -9,16 +9,16 @@ HTTP/1.1 200
 HTTP/1.1 200 
 {"status":"UP"}
 
-=================== 2. Ã‰xito, validaciÃ³n, ausencia y conflicto ===================
+=================== 2. Éxito, validación, ausencia y conflicto ===================
 
-### Ã‰xito: POST /api/v1/alumnos A001 (docente + CSRF) -> 201
+### Éxito: POST /api/v1/alumnos A001 (docente + CSRF) -> 201
 HTTP/1.1 201 
 Location: /api/v1/alumnos/1
 {"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
 
-### ValidaciÃ³n: cuerpo invÃ¡lido -> 400 DATOS_INVALIDOS
+### Validación: cuerpo inválido -> 400 DATOS_INVALIDOS
 HTTP/1.1 400 
-{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"nombre","mensaje":"size must be between 3 and 120"},{"campo":"matricula","mensaje":"must not be blank"},{"campo":"correo","mensaje":"must be a well-formed email address"}]}
+{"detail":"Revisa los campos indicados","instance":"/api/v1/alumnos","status":400,"title":"Bad Request","type":"urn:backend-academico:problema:DATOS_INVALIDOS","codigo":"DATOS_INVALIDOS","campos":[{"campo":"nombre","mensaje":"size must be between 3 and 120"},{"campo":"correo","mensaje":"must be a well-formed email address"},{"campo":"matricula","mensaje":"must not be blank"}]}
 
 ### Ausencia: GET /api/v1/alumnos/999 -> 404 ALUMNO_NO_ENCONTRADO
 HTTP/1.1 404 
@@ -30,21 +30,21 @@ HTTP/1.1 409
 
 =================== 3. Dos rechazos de seguridad de causas distintas ===================
 
-### AutenticaciÃ³n: GET /api/v1/alumnos/1 sin credenciales -> 401
+### Autenticación: GET /api/v1/alumnos/1 sin credenciales -> 401
 HTTP/1.1 401 
-{"timestamp":"2026-11-16T22:43:33.080Z","status":401,"error":"Unauthorized","path":"/api/v1/alumnos/1"}
+{"timestamp":"2026-11-16T22:45:54.547Z","status":401,"error":"Unauthorized","path":"/api/v1/alumnos/1"}
 
-### CSRF: POST de docente con credenciales vÃ¡lidas pero sin token -> 403
+### CSRF: POST de docente con credenciales válidas pero sin token -> 403
 HTTP/1.1 403 
-{"timestamp":"2026-11-16T22:43:33.128Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+{"timestamp":"2026-11-16T22:45:54.622Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
 
-### Rol: POST de ALUMNO con token CSRF vÃ¡lido -> 403
+### Rol: POST de ALUMNO con token CSRF válido -> 403
 HTTP/1.1 403 
-{"timestamp":"2026-11-16T22:43:33.241Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+{"timestamp":"2026-11-16T22:45:54.741Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
 
 =================== 4. Mejora de acceso por propietario ===================
 
-### PreparaciÃ³n: POST A002 (docente)
+### Preparación: POST A002 (docente)
 HTTP/1.1 201 
 Location: /api/v1/alumnos/2
 {"id":2,"matricula":"A002","nombre":"Emmy Noether","correo":"emmy@universidad.mx","estatus":"ACTIVO"}
@@ -59,7 +59,7 @@ HTTP/1.1 404
 
 ### a001 -> lista completa /alumnos -> 403
 HTTP/1.1 403 
-{"timestamp":"2026-11-16T22:43:33.657Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
+{"timestamp":"2026-11-16T22:45:55.177Z","status":403,"error":"Forbidden","path":"/api/v1/alumnos"}
 
 ### Docente -> /alumnos/2 -> 200
 HTTP/1.1 200 
@@ -75,13 +75,17 @@ PS> docker compose stop postgres
 HTTP/1.1 200 
 {"status":"UP"}
 
-### Readiness con PostgreSQL detenido -> 503 DOWN (no debe recibir trÃ¡fico)
+### Readiness con PostgreSQL detenido -> 503 DOWN (no debe recibir tráfico)
 HTTP/1.1 503 
 {"status":"DOWN"}
 
-### Una consulta que necesita la base -> 500 ERROR_INTERNO con referencia
+### Lectura de A001, que ya está en la caché local -> 200 (la caché responde sin consultar la base)
 HTTP/1.1 200 
 {"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+
+### Operación que sí necesita la base (crear A003) -> 500 ERROR_INTERNO con referencia
+HTTP/1.1 500 
+{"detail":"No fue posible completar la operación","instance":"/api/v1/alumnos","status":500,"title":"Internal Server Error","type":"urn:backend-academico:problema:ERROR_INTERNO","codigo":"ERROR_INTERNO","referencia":"a46e7a2e-41fa-4fdf-9a12-126a96d69f23"}
 
 PS> docker compose start postgres
  Container entrega-postgres-1 Starting 
@@ -91,6 +95,7 @@ PS> docker compose start postgres
 HTTP/1.1 200 
 {"status":"UP"}
 
-### La consulta vuelve a funcionar -> 200
-HTTP/1.1 200 
-{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"}
+### La creación vuelve a funcionar -> 201
+HTTP/1.1 201 
+Location: /api/v1/alumnos/3
+{"id":3,"matricula":"A003","nombre":"Grace Hopper","correo":"grace@universidad.mx","estatus":"ACTIVO"}

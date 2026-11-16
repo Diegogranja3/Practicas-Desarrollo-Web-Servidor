@@ -1,9 +1,7 @@
 ﻿PS> git clone https://github.com/Diegogranja3/Practicas-Desarrollo-Web-Servidor.git entrega
-PS> cd entrega
-PS> git checkout reto-u12-entrega
-8dc35e0 Reto U12: acceso por propietario, caché configurable, guía de entrega y script de demostración
-PS> Get-ChildItem target
-(no existe: carpeta limpia, sin compilar)
+PS> cd entrega; git checkout reto-u12-entrega
+901911b Reto U12: la demostración distingue lectura en caché y escritura durante la falla de PostgreSQL
+(sin carpeta target: el clon no estÃ¡ compilado)
 
 PS> java -version
 openjdk version "21.0.10" 2026-01-20 LTS
@@ -22,5 +20,5 @@ Mockito is currently self-attaching to enable the inline-mock-maker. This will n
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.service.AlumnoServiceTest
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- in mx.edu.backendacademico.service.CalendarioClientTest
 [INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
-[INFO] Building jar: C:target\backend-academico-0.0.12-SNAPSHOT.jar
+[INFO] Building jar: target\backend-academico-0.0.12-SNAPSHOT.jar
 [INFO] BUILD SUCCESS

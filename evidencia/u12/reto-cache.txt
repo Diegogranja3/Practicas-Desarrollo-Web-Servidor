@@ -1,0 +1,6 @@
+# Tres consultas seguidas del mismo alumno; se cuentan las sentencias SQL de Hibernate
+ACADEMICO_CACHE_HABILITADA=true -> SQL por consulta de GET /api/v1/alumnos/6: 1, 0, 0
+ACADEMICO_CACHE_HABILITADA=false -> SQL por consulta de GET /api/v1/alumnos/6: 1, 1, 1
+
+PS> docker compose down     # sin -v
+contenedores y red quitados: 3
