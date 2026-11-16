@@ -1,0 +1,158 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< mx.edu:backend-academico >----------------------
+[INFO] Building backend-academico-u11 0.0.11-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend-academico ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend-academico ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 39 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend-academico ---
+[INFO] skip non existing resourceDirectory C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backend-academico ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running mx.edu.backendacademico.service.IdempotenciaTest
+16:23:30.844 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.backendacademico.service.IdempotenciaTest]: IdempotenciaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:23:30.964 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.service.IdempotenciaTest
+16:23:31.078 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.backendacademico.service.IdempotenciaTest]: IdempotenciaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:23:31.082 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.backendacademico.BackendAcademicoApplication for test class mx.edu.backendacademico.service.IdempotenciaTest
+16:23:31.156 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+16:23:31.160 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+16:23:31.204 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+16:23:31.442 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+16:23:31.887 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+16:23:31.889 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+16:23:31.907 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.4.3
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 7777 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+16:23:32.009 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+16:23:32.107 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+16:23:32.310 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: e19ee6d2c512adfec57a92c5544cf34e68c0a78b70d43efabaa2ea614cedee65
+16:23:32.750 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.7417077S
+16:23:32.761 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+16:23:32.761 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+16:23:32.761 [main] INFO org.testcontainers.DockerClientFactory -- ?? Docker server version should be at least 1.6.0
+16:23:32.762 [main] INFO tc.postgres:17-alpine -- Creating container for image: postgres:17-alpine
+16:23:32.908 [main] INFO tc.postgres:17-alpine -- Container postgres:17-alpine is starting: 94db6e9de5e20cddbbd1e6bbf2aef57b9c12196c1252be88c7b87e0e6c9f1795
+16:23:34.925 [main] INFO tc.postgres:17-alpine -- Container postgres:17-alpine started in PT2.163024S
+16:23:34.926 [main] INFO tc.postgres:17-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:52779/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-16T16:23:35.261-06:00  INFO 30944 --- [backend-academico] [           main] m.e.b.service.IdempotenciaTest           : Starting IdempotenciaTest using Java 21.0.10 with PID 30944 (started by Diego in C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor)
+2026-11-16T16:23:35.263-06:00  INFO 30944 --- [backend-academico] [           main] m.e.b.service.IdempotenciaTest           : No active profile set, falling back to 1 default profile: "jpa"
+2026-11-16T16:23:36.206-06:00  INFO 30944 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T16:23:36.275-06:00  INFO 30944 --- [backend-academico] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2026-11-16T16:23:37.050-06:00  INFO 30944 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T16:23:37.216-06:00  INFO 30944 --- [backend-academico] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7bdb4d69
+2026-11-16T16:23:37.219-06:00  INFO 30944 --- [backend-academico] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T16:23:37.243-06:00  INFO 30944 --- [backend-academico] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:52779/test?loggerLevel=OFF (PostgreSQL 17.11)
+2026-11-16T16:23:37.315-06:00  INFO 30944 --- [backend-academico] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-16T16:23:37.320-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.025s)
+2026-11-16T16:23:37.349-06:00  INFO 30944 --- [backend-academico] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-16T16:23:37.436-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-16T16:23:37.455-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - crear alumnos"
+2026-11-16T16:23:37.511-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - crear materias e inscripciones"
+2026-11-16T16:23:37.547-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - solicitudes idempotentes"
+2026-11-16T16:23:37.576-06:00  INFO 30944 --- [backend-academico] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.050s)
+2026-11-16T16:23:37.793-06:00  INFO 30944 --- [backend-academico] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-16T16:23:37.904-06:00  INFO 30944 --- [backend-academico] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-11-16T16:23:38.382-06:00  INFO 30944 --- [backend-academico] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T16:23:38.467-06:00  INFO 30944 --- [backend-academico] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:52779/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T16:23:39.299-06:00  INFO 30944 --- [backend-academico] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T16:23:39.341-06:00  INFO 30944 --- [backend-academico] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T16:23:39.360-06:00  INFO 30944 --- [backend-academico] [           main] m.e.backendacademico.config.CicloDeVida  : Bean inicializado en 2026-11-16T22:23:39.360244900Z
+2026-11-16T16:23:39.447-06:00  INFO 30944 --- [backend-academico] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T16:23:40.799-06:00  INFO 30944 --- [backend-academico] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-11-16T16:23:41.654-06:00  INFO 30944 --- [backend-academico] [           main] m.e.b.service.IdempotenciaTest           : Started IdempotenciaTest in 6.666 seconds (process running for 11.683)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\Diego\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.10\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-16T16:23:42.515-06:00  WARN 30944 --- [backend-academico] [pool-3-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.515-06:00  WARN 30944 --- [backend-academico] [pool-3-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-1) already exists.
+2026-11-16T16:23:42.688-06:00  WARN 30944 --- [backend-academico] [pool-4-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.688-06:00  WARN 30944 --- [backend-academico] [pool-4-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-2) already exists.
+2026-11-16T16:23:42.729-06:00  WARN 30944 --- [backend-academico] [pool-5-thread-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.730-06:00  WARN 30944 --- [backend-academico] [pool-5-thread-2] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-3) already exists.
+2026-11-16T16:23:42.781-06:00  WARN 30944 --- [backend-academico] [pool-6-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.781-06:00  WARN 30944 --- [backend-academico] [pool-6-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-4) already exists.
+2026-11-16T16:23:42.824-06:00  WARN 30944 --- [backend-academico] [pool-7-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.824-06:00  WARN 30944 --- [backend-academico] [pool-7-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-5) already exists.
+2026-11-16T16:23:42.908-06:00  WARN 30944 --- [backend-academico] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.909-06:00  WARN 30944 --- [backend-academico] [           main] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-6) already exists.
+2026-11-16T16:23:42.942-06:00  WARN 30944 --- [backend-academico] [pool-8-thread-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.942-06:00  WARN 30944 --- [backend-academico] [pool-8-thread-2] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-7) already exists.
+2026-11-16T16:23:42.991-06:00  WARN 30944 --- [backend-academico] [pool-9-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:42.992-06:00  WARN 30944 --- [backend-academico] [pool-9-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-8) already exists.
+2026-11-16T16:23:43.029-06:00  WARN 30944 --- [backend-academico] [ool-10-thread-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:43.030-06:00  WARN 30944 --- [backend-academico] [ool-10-thread-1] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-9) already exists.
+2026-11-16T16:23:43.071-06:00  WARN 30944 --- [backend-academico] [ool-11-thread-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:43.071-06:00  WARN 30944 --- [backend-academico] [ool-11-thread-2] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-10) already exists.
+2026-11-16T16:23:43.109-06:00  WARN 30944 --- [backend-academico] [ool-12-thread-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:43.110-06:00  WARN 30944 --- [backend-academico] [ool-12-thread-2] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-11) already exists.
+2026-11-16T16:23:43.211-06:00  WARN 30944 --- [backend-academico] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-16T16:23:43.212-06:00  WARN 30944 --- [backend-academico] [           main] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "uk_solicitud_idempotente"
+  Detail: Key (usuario, clave)=(docente, clave-13) already exists.
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.06 s -- in mx.edu.backendacademico.service.IdempotenciaTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.468 s
+[INFO] Finished at: 2026-11-16T16:23:44-06:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,55 @@
+# Aplicación sobre la copia academico_u11; Flyway:
+Current version of schema "public": 2
+Migrating schema "public" to version "3 - solicitudes idempotentes"
+Successfully applied 1 migration to schema "public", now at version v3 (execution time 00:00.018s)
+
+# 1) Primera solicitud con Idempotency-Key: alta-ada-1
+### POST /api/v1/alumnos  {"matricula":"A020","nombre":"Ada Lovelace","correo":"ada20@universidad.mx"}
+HTTP/1.1 201 
+Location: /api/v1/alumnos/5
+{"id":5,"matricula":"A020","nombre":"Ada Lovelace","correo":"ada20@universidad.mx","estatus":"ACTIVO"}
+
+# 2) Reintento con la misma clave y contenido (p. ej. tras un timeout)
+HTTP/1.1 201 
+Location: /api/v1/alumnos/5
+Idempotency-Replayed: true
+{"id":5,"matricula":"A020","nombre":"Ada Lovelace","correo":"ada20@universidad.mx","estatus":"ACTIVO"}
+
+# 3) Misma clave, contenido distinto
+HTTP/1.1 422 
+{"detail":"La clave de idempotencia alta-ada-1 ya se usó con otro contenido","instance":"/api/v1/alumnos","status":422,"title":"Unprocessable Content","type":"urn:backend-academico:problema:CLAVE_IDEMPOTENCIA_REUTILIZADA","codigo":"CLAVE_IDEMPOTENCIA_REUTILIZADA"}
+
+# 4) Sin la cabecera: contrato de U06 sin cambios (matrícula repetida -> 409)
+HTTP/1.1 409 
+{"detail":"Ya existe la matrícula A020","instance":"/api/v1/alumnos","status":409,"title":"Conflict","type":"urn:backend-academico:problema:MATRICULA_DUPLICADA","codigo":"MATRICULA_DUPLICADA"}
+
+# 5) Dos solicitudes SIMULTÁNEAS con la clave alta-grace-1
+--- solicitud A
+HTTP/1.1 201 
+Location: /api/v1/alumnos/6
+{"id":6,"matricula":"A022","nombre":"Grace Hopper","correo":"grace22@universidad.mx","estatus":"ACTIVO"}
+--- solicitud B
+HTTP/1.1 201 
+Location: /api/v1/alumnos/6
+Idempotency-Replayed: true
+{"id":6,"matricula":"A022","nombre":"Grace Hopper","correo":"grace22@universidad.mx","estatus":"ACTIVO"}
+
+# Estado en PostgreSQL (copia)
+ usuario |    clave     |       huella        | alumno_id | matricula 
+---------+--------------+---------------------+-----------+-----------
+ docente | alta-ada-1   | f65542787d5a1827... |         5 | A020
+ docente | alta-grace-1 | 7e2f097825b580d2... |         6 | A022
+(2 rows)
+
+ id | matricula |    nombre    
+----+-----------+--------------
+  5 | A020      | Ada Lovelace
+  6 | A022      | Grace Hopper
+(2 rows)
+
+# La base principal 'academico' no tiene V3:
+ version 
+---------
+ 2
+(1 row)
+

@@ -25,6 +25,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return problema(HttpStatus.CONFLICT, "MATRICULA_DUPLICADA", ex.getMessage());
     }
 
+    // Reto U11: la clave ya se usó con otro contenido; no se crea nada ni se repite otra respuesta.
+    @ExceptionHandler(IdempotenciaConflictoException.class)
+    ProblemDetail claveReutilizada(IdempotenciaConflictoException ex) {
+        return problema(HttpStatus.UNPROCESSABLE_CONTENT, "CLAVE_IDEMPOTENCIA_REUTILIZADA", ex.getMessage());
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex, HttpHeaders headers,

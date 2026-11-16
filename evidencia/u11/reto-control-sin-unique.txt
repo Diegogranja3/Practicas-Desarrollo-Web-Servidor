@@ -1,0 +1,11 @@
+# Experimento de control: se quitó temporalmente UNIQUE (usuario, clave) de V3 (restaurado después)
+
+[ERROR] Tests run: 13, Failures: 6, Errors: 6, Skipped: 0
+1 x IdempotenciaTest.mismaClaveConDistintoContenidoSeRechaza:64 Unexpected exception type thrown, expected: <mx.edu.backendacademico.exception.IdempotenciaConflictoException> but was: <mx.edu.backendacademico.exception.MatriculaDuplic
+1 x IdempotenciaTest.mismaClaveYDistintoContenidoSimultaneosDejanUnAlumnoYUnRechazo:80 [mx.edu.backendacademico.exception.MatriculaDuplicadaException: Ya existe la matrícula I7, Resultado[alumno=AlumnoResponse[id=13, matricula=I7, nom
+1 x IdempotenciaTest.mismaClaveYDistintoContenidoSimultaneosDejanUnAlumnoYUnRechazo:80 [mx.edu.backendacademico.exception.MatriculaDuplicadaException: Ya existe la matrícula I8, Resultado[alumno=AlumnoResponse[id=14, matricula=I8, nom
+1 x IdempotenciaTest.mismaClaveYDistintoContenidoSimultaneosDejanUnAlumnoYUnRechazo:80 [mx.edu.backendacademico.exception.MatriculaDuplicadaException: Ya existe la matrícula I9, Resultado[alumno=AlumnoResponse[id=16, matricula=I9, nom
+1 x IdempotenciaTest.mismaClaveYDistintoContenidoSimultaneosDejanUnAlumnoYUnRechazo:80 [Resultado[alumno=AlumnoResponse[id=18, matricula=I10, nombre=Ada Lovelace, correo=ada@u.mx, estatus=ACTIVO], repetida=false], mx.edu.backendacadem
+1 x IdempotenciaTest.mismaClaveYDistintoContenidoSimultaneosDejanUnAlumnoYUnRechazo:80 [Resultado[alumno=AlumnoResponse[id=20, matricula=I11, nombre=Ada Lovelace, correo=ada@u.mx, estatus=ACTIVO], repetida=false], mx.edu.backendacadem
+5 x IdempotenciaTest.dosSolicitudesSimultaneasConLaMismaClaveCreanUnSoloAlumno:51 ClassCast class mx.edu.backendacademico.exception.MatriculaDuplicadaException cannot be cast to class mx.edu.backendacademico.service.IdempotenciaServic
+1 x IdempotenciaTest.laRepeticionDevuelveLaRespuestaOriginalAunqueElAlumnoCambie:101 » MatriculaDuplicada Ya existe la matrícula I6
