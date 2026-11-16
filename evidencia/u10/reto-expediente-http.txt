@@ -1,0 +1,51 @@
+# 1) Propietario: mi expediente
+### GET /api/v1/expediente  (usuario a001)
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 223
+
+{"alumno":{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"},"inscripciones":[{"id":1,"materiaId":1,"materia":"Análisis matemático","fecha":"2026-11-14T00:41:26.698239"}]}
+
+
+# 2) Propietario intenta suplantar con ?usuario
+### GET /api/v1/expediente?usuario=a010  (usuario a001)
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 223
+
+{"alumno":{"id":1,"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx","estatus":"ACTIVO"},"inscripciones":[{"id":1,"materiaId":1,"materia":"Análisis matemático","fecha":"2026-11-14T00:41:26.698239"}]}
+
+
+# 3) Usuario ajeno pide el expediente de A010
+### GET /api/v1/expediente/4  (usuario a001)
+HTTP/1.1 404 
+Content-Type: application/problem+json
+
+{"detail":"No existe el alumno con id 4","instance":"/api/v1/expediente/4","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+
+# 4) Mismo usuario, id inexistente (misma respuesta)
+### GET /api/v1/expediente/999  (usuario a001)
+HTTP/1.1 404 
+Content-Type: application/problem+json
+
+{"detail":"No existe el alumno con id 999","instance":"/api/v1/expediente/999","status":404,"title":"Not Found","type":"urn:backend-academico:problema:ALUMNO_NO_ENCONTRADO","codigo":"ALUMNO_NO_ENCONTRADO"}
+
+
+# 5) Administrador
+### GET /api/v1/expediente/4  (usuario admin)
+HTTP/1.1 200 
+Content-Type: application/json
+Content-Length: 132
+
+{"alumno":{"id":4,"matricula":"A010","nombre":"Grace Hopper","correo":"grace@universidad.mx","estatus":"ACTIVO"},"inscripciones":[]}
+
+
+# 6) Docente (regla de rol en el filtro)
+### GET /api/v1/expediente/4  (usuario docente)
+HTTP/1.1 403 
+Content-Type: application/json
+
+{"timestamp":"2026-11-16T22:19:16.302Z","status":403,"error":"Forbidden","path":"/api/v1/expediente/4"}
+
+

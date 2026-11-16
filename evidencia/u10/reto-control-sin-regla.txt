@@ -1,0 +1,4 @@
+# Experimento de control: se desactivó la comprobación de propietario/administrador en ExpedienteService.porId (restaurado después)
+
+[ERROR] Tests run: 9, Failures: 1, Errors: 0, Skipped: 0
+ExpedienteSeguridadTest.usuarioAjenoRecibe404SinConsultarInscripciones:72 Status expected:<404> but was:<200>

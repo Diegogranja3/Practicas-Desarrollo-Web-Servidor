@@ -3,6 +3,8 @@ package mx.edu.backendacademico.service;
 // Coordina los casos de uso y conserva las reglas fuera del transporte HTTP.
 
 import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
 import mx.edu.backendacademico.domain.Alumno;
 import mx.edu.backendacademico.domain.EstatusAlumno;
 import mx.edu.backendacademico.exception.AlumnoNoEncontradoException;
@@ -28,6 +30,11 @@ public class AlumnoService {
     public Alumno buscar(Long id) {
         // La ausencia se interpreta como un error de aplicación explícito.
         return repository.buscarPorId(id).orElseThrow(() -> new AlumnoNoEncontradoException(id));
+    }
+
+    public Optional<Alumno> buscarPorMatricula(String matricula) {
+        // Reto U10: misma normalización que el dominio (strip + mayúsculas con Locale.ROOT).
+        return repository.buscarPorMatricula(matricula.strip().toUpperCase(Locale.ROOT));
     }
 
     @Transactional

@@ -11,5 +11,7 @@ public interface AlumnoRepository {
     List<Alumno> buscarTodos();
     Optional<Alumno> buscarPorId(Long id);
     boolean existePorMatricula(String matricula);
+    // Reto U10: localiza el expediente a partir de la matrícula vinculada a la cuenta autenticada.
+    Optional<Alumno> buscarPorMatricula(String matriculaCanonica);
     void eliminarPorId(Long id);
 }

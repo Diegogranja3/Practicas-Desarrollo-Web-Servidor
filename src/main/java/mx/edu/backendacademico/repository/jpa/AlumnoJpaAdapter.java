@@ -58,6 +58,12 @@ public class AlumnoJpaAdapter implements AlumnoRepository {
     }
 
     @Override
+    public Optional<Alumno> buscarPorMatricula(String matriculaCanonica) {
+        // La columna guarda la forma canónica (V1), así que basta la igualdad exacta.
+        return repository.findByMatricula(matriculaCanonica).map(AlumnoEntity::toDomain);
+    }
+
+    @Override
     @Transactional
     public void eliminarPorId(Long id) {
         repository.deleteById(id);

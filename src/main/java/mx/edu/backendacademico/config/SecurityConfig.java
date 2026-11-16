@@ -22,6 +22,9 @@ public class SecurityConfig {
         http.authorizeHttpRequests(auth -> auth
             .requestMatchers("/api/v1/saludo", "/openapi.yaml", "/error").permitAll()
             .requestMatchers("/api/v1/csrf").authenticated()
+            // Reto U10: el rol decide quién llega; el acceso por objeto lo decide ExpedienteService.
+            .requestMatchers(HttpMethod.GET, "/api/v1/expediente").hasRole("ALUMNO")
+            .requestMatchers(HttpMethod.GET, "/api/v1/expediente/*").hasAnyRole("ALUMNO", "ADMIN")
             .requestMatchers(HttpMethod.GET, "/api/v1/alumnos/**").hasAnyRole("ALUMNO", "DOCENTE", "ADMIN")
             .requestMatchers("/api/v1/**").hasAnyRole("DOCENTE", "ADMIN")
             .anyRequest().denyAll());
@@ -40,6 +43,9 @@ public class SecurityConfig {
         // Cuentas públicas de laboratorio; no contienen credenciales reales.
         return new InMemoryUserDetailsManager(
             User.withUsername("alumno").password(encoder.encode("alumno123")).roles("ALUMNO").build(),
+            // Reto U10: cuentas de alumno vinculadas por matrícula (a001 -> A001, a010 -> A010).
+            User.withUsername("a001").password(encoder.encode("a001pass")).roles("ALUMNO").build(),
+            User.withUsername("a010").password(encoder.encode("a010pass")).roles("ALUMNO").build(),
             User.withUsername("docente").password(encoder.encode("docente123")).roles("DOCENTE").build(),
             User.withUsername("admin").password(encoder.encode("admin123")).roles("ADMIN").build());
     }
