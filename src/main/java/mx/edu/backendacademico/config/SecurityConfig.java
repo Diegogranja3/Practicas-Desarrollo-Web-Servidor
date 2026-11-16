@@ -24,6 +24,9 @@ public class SecurityConfig {
             .requestMatchers("/actuator/health", "/actuator/health/**").permitAll()
             .requestMatchers("/actuator/**").hasRole("ADMIN")
             .requestMatchers("/api/v1/csrf").authenticated()
+            // Reto U12: la lista completa es sólo para el personal; una cuenta ALUMNO consulta su ficha por id
+            // y AccesoPorPropietario verifica que sea la suya.
+            .requestMatchers(HttpMethod.GET, "/api/v1/alumnos").hasAnyRole("DOCENTE", "ADMIN")
             .requestMatchers(HttpMethod.GET, "/api/v1/alumnos/**").hasAnyRole("ALUMNO", "DOCENTE", "ADMIN")
             .requestMatchers("/api/v1/**").hasAnyRole("DOCENTE", "ADMIN")
             .anyRequest().denyAll());
@@ -42,6 +45,9 @@ public class SecurityConfig {
         // Cuentas públicas de laboratorio; no contienen credenciales reales.
         return new InMemoryUserDetailsManager(
             User.withUsername("alumno").password(encoder.encode("alumno123")).roles("ALUMNO").build(),
+            // Reto U12: cuentas de alumno vinculadas por matrícula (a001 -> A001, a002 -> A002).
+            User.withUsername("a001").password(encoder.encode("a001pass")).roles("ALUMNO").build(),
+            User.withUsername("a002").password(encoder.encode("a002pass")).roles("ALUMNO").build(),
             User.withUsername("docente").password(encoder.encode("docente123")).roles("DOCENTE").build(),
             User.withUsername("admin").password(encoder.encode("admin123")).roles("ADMIN").build());
     }

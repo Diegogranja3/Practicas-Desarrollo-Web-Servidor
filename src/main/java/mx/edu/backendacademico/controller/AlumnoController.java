@@ -11,6 +11,7 @@ import mx.edu.backendacademico.dto.AlumnoResponse;
 import mx.edu.backendacademico.dto.CrearAlumnoRequest;
 import mx.edu.backendacademico.service.AlumnoService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +33,10 @@ public class AlumnoController {
 
     // GET consulta sin solicitar cambios de estado de negocio.
     @GetMapping("/{id}")
-    public AlumnoResponse buscar(@PathVariable Long id) { return AlumnoMapper.toResponse(service.buscar(id)); }
+    public AlumnoResponse buscar(@PathVariable Long id, Authentication principal) {
+        // service.buscar atraviesa el proxy (caché); el acceso por propietario se decide después, por usuario.
+        return AlumnoMapper.toResponse(AccesoPorPropietario.exigir(service.buscar(id), principal));
+    }
 
     // El servicio asigna identidad; ResponseEntity publica 201 y Location.
     @PostMapping

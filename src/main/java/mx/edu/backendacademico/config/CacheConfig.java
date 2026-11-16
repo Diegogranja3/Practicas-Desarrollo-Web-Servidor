@@ -1,8 +1,10 @@
 package mx.edu.backendacademico.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
+import org.springframework.cache.support.NoOpCacheManager;
 import org.springframework.cache.transaction.TransactionAwareCacheManagerProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +13,10 @@ import org.springframework.context.annotation.Configuration;
 @EnableCaching
 public class CacheConfig {
     @Bean
-    CacheManager cacheManager() {
+    CacheManager cacheManager(@Value("${academico.cache.habilitada:true}") boolean habilitada) {
+        // Reto U12: la caché local sólo es coherente con UNA instancia. Con varias réplicas se desactiva
+        // (ACADEMICO_CACHE_HABILITADA=false) y cada consulta va a PostgreSQL, que es la autoridad compartida.
+        if (!habilitada) return new NoOpCacheManager();
         // Difiere put/evict/clear hasta commit cuando hay una transacción activa.
         // Esta caché local es de laboratorio: no tiene TTL ni coordinación entre réplicas.
         return new TransactionAwareCacheManagerProxy(
