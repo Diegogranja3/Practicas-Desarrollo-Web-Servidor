@@ -1,0 +1,63 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< mx.edu:backend-academico >----------------------
+[INFO] Building backend-academico-u09 0.0.9-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.0/spring-boot-starter-webmvc-test-4.1.0.pom
+Progress (1): 983 BProgress (1): 1.1 kBProgress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.0/spring-boot-starter-webmvc-test-4.1.0.pom (2.9 kB at 4.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jackson-test/4.1.0/spring-boot-starter-jackson-test-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jackson-test/4.1.0/spring-boot-starter-jackson-test-4.1.0.pom (2.3 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-webmvc-test/4.1.0/spring-boot-webmvc-test-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-webmvc-test/4.1.0/spring-boot-webmvc-test-4.1.0.pom (2.7 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-resttestclient/4.1.0/spring-boot-resttestclient-4.1.0.pom
+Progress (1): 1.0 kBProgress (1): 1.1 kBProgress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-resttestclient/4.1.0/spring-boot-resttestclient-4.1.0.pom (2.4 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.0/spring-boot-starter-webmvc-test-4.1.0.jar
+Progress (1): 0.5/4.8 kBProgress (1): 1.9/4.8 kBProgress (1): 3.2/4.8 kBProgress (1): 4.5/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.0/spring-boot-starter-webmvc-test-4.1.0.jar (4.8 kB at 61 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jackson-test/4.1.0/spring-boot-starter-jackson-test-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-webmvc-test/4.1.0/spring-boot-webmvc-test-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-resttestclient/4.1.0/spring-boot-resttestclient-4.1.0.jar
+Progress (1): 0.9/4.7 kBProgress (1): 2.3/4.7 kBProgress (1): 3.6/4.7 kBProgress (1): 4.7 kB    Progress (2): 4.7 kB | 0.9/46 kBProgress (2): 4.7 kB | 2.3/46 kBProgress (2): 4.7 kB | 3.6/46 kBProgress (2): 4.7 kB | 5.0/46 kBProgress (2): 4.7 kB | 6.4/46 kBProgress (2): 4.7 kB | 7.7/46 kBProgress (2): 4.7 kB | 9.1/46 kBProgress (2): 4.7 kB | 10/46 kB Progress (2): 4.7 kB | 12/46 kBProgress (2): 4.7 kB | 13/46 kBProgress (2): 4.7 kB | 15/46 kBProgress (2): 4.7 kB | 16/46 kBProgress (2): 4.7 kB | 17/46 kBProgress (2): 4.7 kB | 19/46 kBProgress (2): 4.7 kB | 20/46 kBProgress (2): 4.7 kB | 21/46 kBProgress (2): 4.7 kB | 23/46 kBProgress (2): 4.7 kB | 24/46 kBProgress (2): 4.7 kB | 25/46 kBProgress (2): 4.7 kB | 26/46 kB                               Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jackson-test/4.1.0/spring-boot-starter-jackson-test-4.1.0.jar (4.7 kB at 47 kB/s)
+Progress (1): 27/46 kBProgress (1): 29/46 kBProgress (1): 30/46 kBProgress (1): 31/46 kBProgress (1): 33/46 kBProgress (1): 34/46 kBProgress (1): 36/46 kBProgress (1): 37/46 kBProgress (1): 38/46 kBProgress (1): 40/46 kBProgress (1): 41/46 kBProgress (1): 42/46 kBProgress (1): 44/46 kBProgress (1): 45/46 kBProgress (1): 46 kB   Progress (2): 46 kB | 1.4/34 kBProgress (2): 46 kB | 2.7/34 kBProgress (2): 46 kB | 4.1/34 kBProgress (2): 46 kB | 5.5/34 kBProgress (2): 46 kB | 6.8/34 kBProgress (2): 46 kB | 8.2/34 kBProgress (2): 46 kB | 9.6/34 kBProgress (2): 46 kB | 11/34 kB Progress (2): 46 kB | 12/34 kBProgress (2): 46 kB | 14/34 kBProgress (2): 46 kB | 15/34 kBProgress (2): 46 kB | 16/34 kBProgress (2): 46 kB | 18/34 kBProgress (2): 46 kB | 19/34 kBProgress (2): 46 kB | 21/34 kBProgress (2): 46 kB | 22/34 kBProgress (2): 46 kB | 23/34 kBProgress (2): 46 kB | 25/34 kBProgress (2): 46 kB | 26/34 kBProgress (2): 46 kB | 27/34 kBProgress (2): 46 kB | 29/34 kBProgress (2): 46 kB | 30/34 kBProgress (2): 46 kB | 31/34 kBProgress (2): 46 kB | 33/34 kBProgress (2): 46 kB | 34 kB                              Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-webmvc-test/4.1.0/spring-boot-webmvc-test-4.1.0.jar (46 kB at 409 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-resttestclient/4.1.0/spring-boot-resttestclient-4.1.0.jar (34 kB at 297 kB/s)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend-academico ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend-academico ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 30 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend-academico ---
+[INFO] skip non existing resourceDirectory C:\Users\Diego\Documents\UANL\web\Practicas-Desarrollo-Web-Servidor\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend-academico ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backend-academico ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running mx.edu.backendacademico.service.AlumnoServiceTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\Diego\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.10\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.983 s -- in mx.edu.backendacademico.service.AlumnoServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.839 s
+[INFO] Finished at: 2026-11-16T16:10:28-06:00
+[INFO] ------------------------------------------------------------------------
