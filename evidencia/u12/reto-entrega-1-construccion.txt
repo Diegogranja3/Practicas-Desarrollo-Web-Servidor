@@ -1,7 +1,7 @@
-﻿PS> git clone https://github.com/Diegogranja3/Practicas-Desarrollo-Web-Servidor.git entrega
+PS> git clone https://github.com/Diegogranja3/Practicas-Desarrollo-Web-Servidor.git entrega
 PS> cd entrega; git checkout reto-u12-entrega
 901911b Reto U12: la demostración distingue lectura en caché y escritura durante la falla de PostgreSQL
-(sin carpeta target: el clon no estÃ¡ compilado)
+(sin carpeta target: el clon no está compilado)
 
 PS> java -version
 openjdk version "21.0.10" 2026-01-20 LTS
